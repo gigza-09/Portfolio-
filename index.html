@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prajakta Vispute — Digital Product Designer</title>
+  <meta name="description" content="Prajakta Vispute — digital product designer. Designing experiences that come alive through insight and interaction." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Geist:wght@400;500&family=Instrument+Sans:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@700&family=Newsreader:ital,wght@1,300&family=Outfit:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="Prajakta Vispute — home">
+        <span class="brand__logo">P.</span>
+        <span class="brand__name">Prajakta Vispute</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#work" class="nav__link is-active">Work</a>
+        <a href="#showcase" class="nav__link">Showcase</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="https://drive.google.com/drive/folders/1hAsbrjrW87Lb0qt52RB3qjIFTZk93kbB" class="nav__link nav__link--strong" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+      <!-- Hover-to-paint side panels (flower pattern + pencil cursor) -->
+      <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+        <defs>
+          <pattern id="flower-pattern" width="92" height="120" patternUnits="userSpaceOnUse">
+            <image href="assets/prajakta-flower.svg" x="20" y="4" width="52" height="52" />
+            <image href="assets/prajakta-flower.svg" x="-26" y="64" width="52" height="52" />
+            <image href="assets/prajakta-flower.svg" x="66" y="64" width="52" height="52" />
+          </pattern>
+        </defs>
+      </svg>
+      <div class="hero__side hero__side--l" aria-hidden="true"><span class="hero__fill"><svg class="hero__pattern"><rect width="100%" height="100%" fill="url(#flower-pattern)" /></svg></span></div>
+      <div class="hero__side hero__side--r" aria-hidden="true"><span class="hero__fill"><svg class="hero__pattern"><rect width="100%" height="100%" fill="url(#flower-pattern)" /></svg></span></div>
+      <div class="pencil-cursor" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+      </div>
+
+      <div class="container hero__frame">
+        <div class="hero__art" aria-label="Namaste! I'm Prajakta Vispute, Digital Product Designer">
+          <p class="hero__hello">Namaste! I’m</p>
+          <h1 class="hero__name hero__name--first">Prajakta</h1>
+          <img class="hero__portrait" src="assets/Prajakta.svg" alt="Illustrated portrait of Prajakta" width="294" height="338" />
+          <span class="hero__name hero__name--last" aria-hidden="true">Vispute</span>
+          <p class="hero__role">Digital Product Designer <span class="caret">_</span></p>
+        </div>
+      </div>
+
+      <div class="hero__band">
+        <svg class="sparkle sparkle--l" width="15" height="15" viewBox="0 0 15 15" aria-hidden="true"><path d="M7.3526 0L9.43223 5.27297L14.7052 7.3526L9.43223 9.43223L7.3526 14.7052L5.27297 9.43223L0 7.3526L5.27297 5.27297L7.3526 0Z" fill="#E0E0E0"/></svg>
+        <svg class="sparkle sparkle--r" width="15" height="15" viewBox="0 0 15 15" aria-hidden="true"><path d="M7.3526 0L9.43223 5.27297L14.7052 7.3526L9.43223 9.43223L7.3526 14.7052L5.27297 9.43223L0 7.3526L5.27297 5.27297L7.3526 0Z" fill="#E0E0E0"/></svg>
+        <div class="container hero__band-inner">
+          <p class="hero__tagline">Designing experiences that come alive through insight and interaction</p>
+          <p class="hero__meta"><strong>1.5+ years</strong> designing B2C, AI Experiences <span class="hero__bar" aria-hidden="true"></span> Currently <span class="muted">@Google</span></p>
+        </div>
+      </div>
+
+      <a href="#work" class="scroll-pill">
+        Scroll to explore
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M7.73985 2.57989V12.8993M12.2546 8.38458L7.73985 12.8993L3.2251 8.38458" stroke="#979797" stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </section>
+
+    <!-- ========== SELECTED WORK ========== -->
+    <section id="work" class="work">
+      <div class="container">
+        <h2 class="section-title reveal">Selected <em>Work</em></h2>
+
+        <div class="projects">
+          <article class="project reveal">
+            <a href="#" class="project__link">
+              <div class="project__thumb" aria-hidden="true"></div>
+              <div class="project__info">
+                <div>
+                  <h3 class="project__title">Bloopy -</h3>
+                  <p class="project__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <p class="project__type">Project type: Academic Project , all tags and shit</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="project reveal">
+            <a href="#" class="project__link">
+              <div class="project__thumb" aria-hidden="true"></div>
+              <div class="project__info">
+                <div>
+                  <h3 class="project__title">This Project is Under Construction</h3>
+                  <p class="project__desc">work in progress</p>
+                </div>
+                <p class="project__type">Project type:</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="project reveal">
+            <a href="#" class="project__link">
+              <div class="project__thumb" aria-hidden="true"></div>
+              <div class="project__info">
+                <div>
+                  <h3 class="project__title">This Project is Under Construction</h3>
+                  <p class="project__desc">Work in progress</p>
+                </div>
+                <p class="project__type">Project type:</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SHOWCASE / GALLERY ========== -->
+    <section id="showcase" class="showcase">
+      <div class="container container--narrow">
+        <div class="gallery">
+          <div class="gallery__row">
+          <figure class="tile reveal" style="--w:301;aspect-ratio:301/233;background:rgb(171,217,246);" aria-label="PayEZ payments app and research map">
+            <img class="fit" src="assets/figma/showcase/showcase-01-phone-mockup.png" alt="PayEZ app home screen" loading="lazy" style="left:4%;top:5%;width:27%;height:90%" />
+            <img class="fit" src="assets/figma/showcase/showcase-01-flowchart.png" alt="Research map on elderly people and online payments" loading="lazy" style="left:33%;top:5%;width:64%;height:90%" />
+          </figure>
+          <figure class="tile reveal" style="--w:305.7;aspect-ratio:305.7/233;background:rgb(161,230,186);" aria-label="Health tracking app with step analytics">
+            <img class="fit" src="assets/figma/showcase/showcase-02-chart-header.png" alt="Daily step goal leaderboard" loading="lazy" style="left:4%;top:5%;width:43%;height:42%" />
+            <img class="fit" src="assets/figma/showcase/showcase-02-photo.png" alt="Average steps per day chart" loading="lazy" style="left:4%;top:50%;width:43%;height:45%" />
+            <img class="cover" src="assets/figma/showcase/showcase-02-steps-chart.png" alt="Elderly people walking in a park" loading="lazy" style="left:50%;top:5%;width:46%;height:90%" />
+          </figure>
+          <figure class="tile reveal" style="--w:300.3;aspect-ratio:300.3/233;background:rgb(254,202,168);" aria-label="Children's learning game">
+            <img class="fit" src="assets/figma/showcase/showcase-03-phone-mockup.png" alt="Level complete screen of the learning game" loading="lazy" style="left:5%;top:5%;width:36%;height:90%" />
+            <img class="cover" src="assets/figma/showcase/showcase-03-kid-photo.png" alt="Child testing the game" loading="lazy" style="left:46%;top:5%;width:48%;height:90%" />
+          </figure>
+          </div>
+          <div class="gallery__row">
+          <figure class="tile reveal" style="--w:460.5;aspect-ratio:460.5/224.5;background:rgb(210,196,255);" aria-label="Desktop dashboard and research map">
+            <img class="fit" src="assets/figma/showcase/showcase-04-imac-mockup.png" alt="Fuse project dashboard on a desktop" loading="lazy" style="left:3%;top:6%;width:46%;height:88%" />
+            <img class="fit" src="assets/figma/showcase/showcase-04-research-map.png" alt="Stakeholder and tools map" loading="lazy" style="left:51%;top:4%;width:46%;height:92%" />
+          </figure>
+          <figure class="tile reveal" style="--w:458.2;aspect-ratio:458.2/224.5;background:rgb(161,225,229);" aria-label="Loan calculator app and user flow">
+            <img class="fit" src="assets/figma/showcase/showcase-05-loan-calculator.png" alt="Loan calculator screen" loading="lazy" style="left:4%;top:6%;width:21%;height:88%" />
+            <img class="fit" src="assets/figma/showcase/showcase-05-loan-dues.png" alt="Dues screen" loading="lazy" style="left:25%;top:6%;width:21%;height:88%" />
+            <img class="fit" src="assets/figma/showcase/showcase-05-loan-flow.png" alt="Self help group stakeholder flow" loading="lazy" style="left:48%;top:4%;width:49%;height:92%" />
+          </figure>
+          </div>
+          <div class="gallery__row">
+          <figure class="tile reveal" style="--w:233.7;aspect-ratio:233.7/233;background:rgb(255,194,202);" aria-label="Circle of fifths visualisation">
+            <img class="cover" src="assets/figma/showcase/showcase-06-chord-wheel-b.png" alt="Circle of fifths, minor progression" loading="lazy" style="left:6%;top:6%;width:44%;height:88%;object-position:left center" />
+            <img class="cover" src="assets/figma/showcase/showcase-06-chord-wheel-a.png" alt="Circle of fifths, major progression" loading="lazy" style="left:50%;top:6%;width:44%;height:88%;object-position:right center" />
+          </figure>
+          <figure class="tile reveal" style="--w:370.7;aspect-ratio:370.7/233;background:rgb(255,228,147);" aria-label="Arduino tic-tac-toe circuit">
+            <img class="fit" src="assets/figma/showcase/showcase-07-arduino.png" alt="Arduino tic-tac-toe circuit with serial monitor" loading="lazy" style="left:6%;top:5%;width:88%;height:90%" />
+          </figure>
+          <figure class="tile reveal" style="--w:302;aspect-ratio:302/233;background:rgb(214,200,245);" aria-label="Pet translator app illustration">
+            <img class="fit" src="assets/figma/showcase/showcase-08-meow.png" alt="Cartoon cat and dog holding meow and woof signs" loading="lazy" style="left:0;top:6%;width:100%;height:94%" />
+            <img class="fit" src="assets/figma/showcase/showcase-08-phone-mockup.png" alt="Translator app screen" loading="lazy" style="left:37%;top:5%;width:26%;height:90%" />
+          </figure>
+          </div>
+        </div>
+        <p class="craft reveal">Craftmaxxxing!</p>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="about">
+      <div class="container about__grid">
+        <div class="about__text">
+          <h2 class="about__hi">Hi there, <img src="assets/WwGy7hjpI08xrXxCbcg5OAUA.png" alt="" width="24" height="19" /></h2>
+          <p>Reintroducing, I’m Prajakta, final year ux design student from MIT WPU, Pune.</p>
+          <p>A designer who delusionally believes that everything is figure-out-able... especially with design thinking</p>
+          <p>Grounded in an understanding of how people think, feel, and behave, then shaping them into experiences where they just... glide.</p>
+          <p>Listening to stories- illustrating them - been fond of since childhood - practicing empathy (maybe but frame better)</p>
+          <p>sailing thru tea cups and multiple tabs on computer (something better)</p>
+
+          <div class="experience">
+            <h3 class="label">Experiences</h3>
+            <ul class="experience__list">
+              <li class="exp">
+                <div class="exp__logo exp__logo--idc">
+                  <img src="assets/zTvnO955e8CSQMFdA6dYnVYG9E.png" alt="" width="36" height="35" />
+                  <img src="assets/rZK2uNwIMNsgOl9ZLRvT0wwHR4.png" alt="IDC School of Design" width="92" height="21" />
+                </div>
+                <div class="exp__role"><strong>Research Intern</strong><span>IDC IIT Bombay</span></div>
+                <div class="exp__time"><strong>2025 -26</strong><span>1+ Year</span></div>
+              </li>
+              <li class="exp">
+                <div class="exp__logo"><img src="assets/B0II6WoDOQ4mOUCmckrEvBL1o0.png" alt="Orrgn Studios" width="47" height="46" style="border-radius:4.3px" /></div>
+                <div class="exp__role"><strong>UX Design Intern</strong><span>Orrgn Studios</span></div>
+                <div class="exp__time"><strong>2025</strong><span>3 Months</span></div>
+              </li>
+              <li class="exp">
+                <div class="exp__logo"><img src="assets/1rKR9wmkw0F3KlqSFoWdZVVZ4.png" alt="Encora" width="60" height="60" /></div>
+                <div class="exp__role"><strong>UX Design Intern</strong><span>Encora Inc.</span></div>
+                <div class="exp__time"><strong>2025</strong><span>3 Months</span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="about__photos reveal">
+          <img src="assets/WqI40huHm8194N18P4imWmY0.png" alt="Collage of photos from Prajakta's life and work" width="404" height="559" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== TOOLKIT ========== -->
+    <section class="toolkit">
+      <div class="container"><h3 class="label">Toolkit</h3></div>
+      <div class="toolkit__band">
+        <div class="container toolkit__inner">
+          <ul class="toolkit__icons" aria-label="Tools I use">
+            <li><img src="assets/SkveVB9NUrFjxCX0FvDr76MJs.png" alt="Figma" width="33" height="36" /></li>
+            <li><img src="assets/Ir5IbBXKHeh6aQkR9bTMpMPTiU.png" alt="Miro" width="26" height="26" /></li>
+            <li><img src="assets/jsLKtQqe57KBaXWlmWca3wvQs.png" alt="Claude" width="27" height="27" /></li>
+            <li><img src="assets/ax3ClV96DrHzcLIM9TYnvB0vvw.png" alt="Notion" width="30" height="30" /></li>
+            <li><img src="assets/KmD7cS7yC5WOLmhVPVLh5tFuHOs.png" alt="Design tool" width="30" height="30" /></li>
+            <li><img src="assets/3omdKjNq9x17QUxcBe7PbRpg1U.png" alt="p5.js" width="26" height="26" /></li>
+          </ul>
+          <p class="whimsy">and a bit of whimsy... <span>✨</span></p>
+        </div>
+      </div>
+    </section>
+
+    <p class="motto reveal">Sensing • Sensitizing • Sensemaking</p>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__cta">Open to internship opportunities</p>
+        <p class="footer__small"><a href="mailto:vprajaktacs09@gmail.com">vprajaktacs09@gmail.com</a><br />Made with &lt;3 @ 2026 Prajakta Vispute</p>
+      </div>
+      <nav class="footer__links" aria-label="Social">
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Behance</a>
+        <a href="https://drive.google.com/drive/folders/1hAsbrjrW87Lb0qt52RB3qjIFTZk93kbB" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
