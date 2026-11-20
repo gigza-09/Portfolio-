@@ -36,6 +36,14 @@
 
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 16px); }
 
+/* Flower cursor: the "16 16" is the click point (the flower's centre) */
+html {
+  cursor: url("../assets/cursor-flower.svg") 16 16, auto;
+}
+a, button, [role="button"], label, summary {
+  cursor: url("../assets/cursor-flower.svg") 16 16, pointer;
+}
+
 body {
   margin: 0;
   background: var(--bg);
