@@ -54,8 +54,10 @@
           <li><a href="#insights">Insights</a></li>
           <li><a href="#ideation">Ideation</a></li>
           <li><a href="#intervention">Intervention</a></li>
+          <li><a href="#journey">User journey</a></li>
           <li><a href="#decisions">Key decisions</a></li>
           <li><a href="#solution">Solution</a></li>
+          <li><a href="#impact">Impact</a></li>
         </ol>
       </nav>
 
@@ -237,7 +239,7 @@
               <p class="bl-persona__name">Annya, 31 · Senior Analyst, Mumbai</p>
               <p>Has stopped planning personal activities after repeated failures, accepting scrolling as her default evening routine.</p>
               <p class="bl-persona__need">She needs a small, tangible success that rebuilds her belief in change.</p>
-              <ul class="bl-chips bl-chips--sm"><li>Stopped personal interest activity</li><li>Scrolling is default</li></ul>
+              <ul class="bl-chips bl-chips--sm"><li>Stopped personal interest activity</li><li>Scrolling is default</li><li>Low trust in change</li><li>Needs a low-effort start</li></ul>
             </article>
             <article class="bl-persona">
               <p class="bl-persona__type">The Motivated Professional</p>
@@ -245,6 +247,7 @@
               <p class="bl-persona__name">Aryan, 27 · Product Manager, Bangalore</p>
               <p>Aspires to use his evenings meaningfully but lacks the energy after work, falling back on scrolling and feeling guilty.</p>
               <p class="bl-persona__need">He needs a recovery system designed for his exhausted self, not his motivated morning self.</p>
+              <ul class="bl-chips bl-chips--sm"><li>High intent, low energy</li><li>Guilt after scrolling</li><li>Wants meaningful evenings</li><li>Needs structure, not willpower</li></ul>
             </article>
           </div>
         </section>
@@ -371,9 +374,59 @@
           </div>
         </section>
 
-        <!-- ========== 07 KEY DECISIONS ========== -->
+        <!-- ========== 07 USER JOURNEY ========== -->
+        <section id="journey" class="bl-section">
+          <p class="bl-kicker reveal"><span>07</span> User journey</p>
+          <h2 class="bl-h2 reveal">From work mode <em>to personal fulfilment</em></h2>
+          <p class="bl-lead reveal">One flexible journey for every energy level.</p>
+          <div class="bl-jy reveal">
+            <svg class="bl-jy__defs" width="0" height="0" aria-hidden="true" focusable="false">
+              <filter id="jy-rough"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" /><feDisplacementMap in="SourceGraphic" scale="3.2" /></filter>
+            </svg>
+            <ol class="bl-jy__stages">
+              <li class="bl-jy__stage">
+                <img src="assets/case-studies/bloopy/journey/workday.png" alt="A tired young worker resting his cheek on his hand at his laptop" width="640" height="429" loading="lazy" />
+                <h3 class="bl-jy__label">Workday ends</h3>
+                <p>Drained, needs a reset.</p>
+              </li>
+              <li class="bl-jy__stage">
+                <img src="assets/case-studies/bloopy/journey/detach.png" alt="A hand swiping the Bloopy mascot across a phone to close the work window" width="609" height="640" loading="lazy" />
+                <h3 class="bl-jy__label">Detach</h3>
+                <p>Swipe to close work.</p>
+              </li>
+              <li class="bl-jy__stage">
+                <img src="assets/case-studies/bloopy/journey/checkin.png" alt="The Bloopy mascot with a speech bubble of three mood faces" width="603" height="640" loading="lazy" />
+                <h3 class="bl-jy__label">Check in</h3>
+                <p>A quick mood check.</p>
+              </li>
+              <li class="bl-jy__branch">
+                <div class="bl-jy__path bl-jy__path--low">
+                  <img src="assets/case-studies/bloopy/journey/autotelic.png" alt="The Bloopy mascot enjoying music with headphones" width="640" height="450" loading="lazy" />
+                  <div><span class="bl-jy__tag">Low motivation</span><h3>Autotelic experience</h3><p>The experience is the reward.</p></div>
+                </div>
+                <div class="bl-jy__path bl-jy__path--high">
+                  <img src="assets/case-studies/bloopy/journey/streak.png" alt="The Bloopy mascot in a beret painting a flower on an easel" width="640" height="486" loading="lazy" />
+                  <div><span class="bl-jy__tag">High motivation</span><h3>Timed streak journey</h3><p>Your own interest, lightly structured.</p></div>
+                </div>
+              </li>
+              <li class="bl-jy__stage bl-jy__stage--end">
+                <div class="bl-jy__pair">
+                  <img src="assets/case-studies/bloopy/journey/connect.png" alt="Three friends sitting together with the Bloopy mascot" width="640" height="445" loading="lazy" />
+                  <img src="assets/case-studies/bloopy/journey/rest.png" alt="The Bloopy mascot sleeping in a hammock, phone face down below" width="640" height="553" loading="lazy" />
+                </div>
+                <h3 class="bl-jy__label">Connect</h3>
+                <p>Be with your group, or rest.</p>
+              </li>
+            </ol>
+            <ol class="bl-jy__phases" aria-label="Journey phases">
+              <li>Work to personal</li><li>Detach</li><li>Choose a path</li><li class="is-recover">Recover (your way)</li><li class="is-connect">Connect or rest</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- ========== 08 KEY DECISIONS ========== -->
         <section id="decisions" class="bl-section">
-          <p class="bl-kicker reveal"><span>07</span> Key design decisions</p>
+          <p class="bl-kicker reveal"><span>08</span> Key design decisions</p>
 
           <article class="bl-decision reveal">
             <header class="bl-decision__head bl-decision__head--lav">
@@ -385,8 +438,8 @@
             </header>
             <p class="bl-decision__body">Replaced the infinity-loop interaction with a swipe-to-close gesture, mimicking the real-life action of closing a window to create a clear sense of switching off from work.</p>
             <div class="bl-phones bl-phones--compare">
-              <figure><img src="assets/case-studies/bloopy/kd-infinity-loop.png" alt="Earlier version: trace a glowing dot along an infinity loop" width="243" height="501" loading="lazy" /><figcaption class="is-before">Before · infinity loop</figcaption></figure>
-              <figure><img src="assets/case-studies/bloopy/kd-swipe-to-close.png" alt="Final version: swipe across to close the work window, 'Stepping into your personal space'" width="243" height="501" loading="lazy" /><figcaption class="is-after">After · swipe to close</figcaption></figure>
+              <figure class="bl-iter" tabindex="0"><img src="assets/case-studies/bloopy/kd-infinity-loop.png" alt="Earlier version: trace a glowing dot along an infinity loop" width="243" height="501" loading="lazy" /><figcaption class="is-before">Before · infinity loop</figcaption><p class="bl-iter__tip"><b>Before</b>Trace a glowing dot along an infinity loop. An abstract interaction to switch off from work.</p></figure>
+              <figure class="bl-iter" tabindex="0"><img src="assets/case-studies/bloopy/kd-swipe-to-close.png" alt="Final version: swipe across to close the work window, 'Stepping into your personal space'" width="243" height="501" loading="lazy" /><figcaption class="is-after">After · swipe to close</figcaption><p class="bl-iter__tip"><b>After</b>Swipe to close, like closing a window. A familiar gesture that gives a clear sense of switching off from work.</p></figure>
             </div>
           </article>
 
@@ -400,9 +453,9 @@
             </header>
             <p class="bl-decision__body">Replaced ambiguous, effortful tasks with <strong>autotelic prompts</strong>, where the experience itself is rewarding, making recovery easier to initiate without pressure.</p>
             <div class="bl-phones">
-              <img src="assets/case-studies/bloopy/kd-sketch-prompt.png" alt="'Your canvas is waiting… Let's sketch for 5 mins!' with the Bloopy mascot" width="243" height="502" loading="lazy" />
-              <img src="assets/case-studies/bloopy/kd-sensory-prompt.png" alt="Sensory prompt: close your eyes and hold the coldest nearby object for 10 seconds" width="243" height="502" loading="lazy" />
-              <img src="assets/case-studies/bloopy/kd-timer.png" alt="Gentle timer for 'Get back to painting' with options to take a pause or finish" width="243" height="501" loading="lazy" />
+              <figure class="bl-iter" tabindex="0"><img src="assets/case-studies/bloopy/kd-sketch-prompt.png" alt="'Your canvas is waiting… Let's sketch for 5 mins!' with the Bloopy mascot" width="243" height="502" loading="lazy" /><p class="bl-iter__tip"><b>Before</b>An ambiguous task. “Let’s sketch for 5 mins!” still asked for effort and left the user unsure what to do.</p></figure>
+              <figure class="bl-iter" tabindex="0"><img src="assets/case-studies/bloopy/kd-sensory-prompt.png" alt="Sensory prompt: close your eyes and hold the coldest nearby object for 10 seconds" width="243" height="502" loading="lazy" /><p class="bl-iter__tip"><b>After</b>Autotelic prompts, where the experience itself is the reward.</p></figure>
+              <figure class="bl-iter" tabindex="0"><img src="assets/case-studies/bloopy/kd-timer.png" alt="Gentle timer for 'Get back to painting' with options to take a pause or finish" width="243" height="501" loading="lazy" /><p class="bl-iter__tip"><b>Gentle timer</b>Take a pause or finish anytime, so recovery starts without pressure.</p></figure>
             </div>
           </article>
 
@@ -417,15 +470,15 @@
             <p class="bl-decision__body">Iterated collective challenges with simple participation visualisations, encouraging connection without obligation, comparison, or pressure to stay active.</p>
             <p class="bl-decision__note">Introduced a rest option for users who want to disconnect from screens, making rest as valid as participation.</p>
             <div class="bl-phones">
-              <img src="assets/case-studies/bloopy/kd-growing-tree.png" alt="'Growing a tree — challenge completed' with a sunflower plant and each member's contribution" width="250" height="516" loading="lazy" />
-              <img src="assets/case-studies/bloopy/kd-group-participation.png" alt="Group journey screen with a participation ring for the group 'Delulu is Solulu' and recent activities" width="251" height="516" loading="lazy" />
+              <figure class="bl-iter" tabindex="0"><img src="assets/case-studies/bloopy/kd-growing-tree.png" alt="'Growing a tree — challenge completed' with a sunflower plant and each member's contribution" width="250" height="516" loading="lazy" /><p class="bl-iter__tip"><b>Before</b>The tree challenge added codependency instead of co-regulation: progress depended on everyone else.</p></figure>
+              <figure class="bl-iter" tabindex="0"><img src="assets/case-studies/bloopy/kd-group-participation.png" alt="Group journey screen with a participation ring for the group 'Delulu is Solulu' and recent activities" width="251" height="516" loading="lazy" /><p class="bl-iter__tip"><b>After · Shared presence</b>A simple participation ring: connection without obligation, comparison, or pressure to stay active.</p></figure>
             </div>
           </article>
         </section>
 
-        <!-- ========== 08 SOLUTION ========== -->
+        <!-- ========== 09 SOLUTION ========== -->
         <section id="solution" class="bl-section">
-          <p class="bl-kicker reveal"><span>08</span> The Solution</p>
+          <p class="bl-kicker reveal"><span>09</span> The Solution</p>
           <h2 class="bl-h2 reveal">Screen flows</h2>
           <p class="bl-lead reveal">The app journey, flow by flow: from the moment work ends to recovering with your group.</p>
           <article class="bl-flow reveal" id="flow-switching-off">
@@ -535,6 +588,27 @@
         </section>
 
         <!-- ========== END ========== -->
+        <!-- ========== 10 IMPACT ========== -->
+        <section id="impact" class="bl-section">
+          <p class="bl-kicker reveal"><span>10</span> Impact</p>
+          <h2 class="bl-h2 reveal">If Bloopy launched tomorrow, <em>success would look like…</em></h2>
+          <p class="bl-lead reveal">Not time spent in the app, but evenings that feel like your own.</p>
+          <ol class="bl-impact reveal">
+            <li>
+              <p class="bl-impact__name">Intentional recovery evenings</p>
+              <p>Evenings per week where a user detaches from work, then does an activity, connects, or chooses rest.</p>
+            </li>
+            <li>
+              <p class="bl-impact__name">Detachment rate</p>
+              <p>Share of end-of-work nudges that lead to completing the swipe-to-close ritual.</p>
+            </li>
+            <li>
+              <p class="bl-impact__name">Less passive scrolling</p>
+              <p>Drop in scrolling during the first hour after work, without total screen time going up.</p>
+            </li>
+          </ol>
+        </section>
+
         <section class="bl-section bl-end reveal">
           <img src="assets/case-studies/bloopy/mascot.png" alt="" width="85" height="85" />
           <p class="bl-end__text">Thanks for reading! <em>Go switch off for a bit.</em></p>
