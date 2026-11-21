@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KG Hub — Making biomedical knowledge graphs usable · Prajakta Vispute</title>
+  <meta name="description" content="Case study (NDA): designing KG Hub, a workspace where researchers and clinicians ask, map and edit biomedical knowledge graphs without writing queries." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/bloopy.css" />
+  <link rel="stylesheet" href="css/kg.css" />
+</head>
+<body class="bl-page kg-page">
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="brand" aria-label="Prajakta Vispute — home">
+        <span class="brand__logo">P.</span>
+        <span class="brand__name">Prajakta Vispute</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html#work" class="nav__link is-active">Work</a>
+        <a href="index.html#showcase" class="nav__link">Showcase</a>
+        <a href="index.html#about" class="nav__link">About</a>
+        <a href="https://drive.google.com/drive/folders/1hAsbrjrW87Lb0qt52RB3qjIFTZk93kbB" class="nav__link nav__link--strong" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="bl">
+
+    <!-- ========== HERO ========== -->
+    <div class="bl-banner-wrap">
+      <a href="index.html#work" class="bl-back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7.5 3.5 3 8l4.5 4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All work
+      </a>
+      <section class="bl-hero">
+        <img src="assets/case-studies/kg/hero.jpg" alt="KG Hub: a knowledge graph workspace showing a plain-language question about EGFR drugs, the generated query and the highlighted answer on the graph" width="1728" height="830" />
+      </section>
+    </div>
+
+    <div class="bl-wrap bl-layout">
+
+      <nav class="bl-toc" aria-label="Case study contents">
+        <p class="bl-toc__title">Contents</p>
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#problem">Problem</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#validation">Validation</a></li>
+          <li><a href="#principles">Principles</a></li>
+          <li><a href="#decisions">Key decisions</a></li>
+          <li><a href="#solution">Final flow</a></li>
+          <li><a href="#reflection">Reflection</a></li>
+        </ol>
+      </nav>
+
+      <div class="bl-content">
+
+        <!-- ========== 01 OVERVIEW ========== -->
+        <section id="overview" class="bl-section">
+          <ul class="bl-tags" aria-label="Project tags">
+            <li>B2B SaaS</li><li>AI &amp; Data-heavy UI</li><li>Healthcare</li><li>NDA</li>
+          </ul>
+          <h1 class="bl-title">KG Hub <em>— making biomedical knowledge graphs usable</em></h1>
+
+          <div class="bl-split">
+            <div class="bl-card bl-card--lav">
+              <h2 class="bl-card__h">What is KG Hub?</h2>
+              <p>A workspace where <strong>translational scientists and clinicians build, question and share biomedical knowledge graphs</strong>: networks that connect genes, drugs, diseases, pathways, biomarkers and clinical trials.</p>
+            </div>
+            <div class="bl-card bl-card--soft">
+              <h2 class="bl-card__h">The challenge</h2>
+              <p>Make a tool that holds <strong>millions of connected facts</strong> feel simple enough for a clinician between patients, and powerful enough for a scientist building a hypothesis.</p>
+            </div>
+          </div>
+
+          <dl class="bl-snapshot">
+            <div><dt>My role</dt><dd>Product designer: research synthesis, competitor validation, IA, interaction &amp; UI</dd></div>
+            <div><dt>Users</dt><dd>Translational scientists, clinicians</dd></div>
+            <div><dt>Platform</dt><dd>Web app, desktop first</dd></div>
+            <div><dt>Domain</dt><dd>Drug discovery, oncology (lung cancer)</dd></div>
+          </dl>
+
+          <div class="kg-nda">
+            <svg width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3.5" y="7" width="9" height="6.5" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+            <p><strong>This project is under NDA.</strong> The client, internal datasets and production screens are not shown. Every screen here is recreated with <strong>public</strong> biomedical knowledge (EGFR-driven lung cancer), people are research personas, and "KG Hub" is a working title.</p>
+          </div>
+        </section>
+
+        <!-- ========== 02 PROBLEM ========== -->
+        <section id="problem" class="bl-section reveal">
+          <p class="bl-kicker"><span>02</span>Problem</p>
+          <h2 class="bl-h2">The knowledge exists. <em>Getting to it doesn't work.</em></h2>
+          <p class="bl-lead">Knowledge graphs already link what researchers need: which drug targets which gene, which mutation causes resistance, which trial tested it. But today they're built for data engineers, not for the people who make the decisions.</p>
+          <ul class="kg-problems">
+            <li><b>Scattered across tools</b>Our personas move between PubMed, Open Targets and Hetionet to answer one question, and still miss the full picture.</li>
+            <li><b>Locked behind a query language</b>Asking a graph means writing Cypher or SPARQL. Most clinicians never will.</li>
+            <li><b>Too much to look at</b>Load a real graph and you get a "hairball": thousands of crossing lines no one can read.</li>
+            <li><b>Hard to trust, hard to share</b>Scientists need the source behind every link, and patient data can't leave the institution.</li>
+          </ul>
+          <p class="bl-pull" style="margin-top:44px">How might we let researchers and clinicians <em>ask questions of huge biomedical graphs</em> in their own words, without losing trust, control or their train of thought?</p>
+        </section>
+
+        <!-- ========== 03 RESEARCH ========== -->
+        <section id="research" class="bl-section reveal">
+          <p class="bl-kicker"><span>03</span>Research</p>
+          <h2 class="bl-h2">Understanding drug discovery <em>before designing for it</em></h2>
+          <p class="bl-lead">We started from the domain: how drugs move from target discovery to preclinical testing to the clinic, and where data breaks along the way. All of it was mapped on a shared research board.</p>
+
+          <dl class="bl-snapshot">
+            <div><dt>Domain study</dt><dd>Preclinical &amp; clinical data, PK/PD roles, multi-omics</dd></div>
+            <div><dt>2 personas</dt><dd>Translational scientist and clinician</dd></div>
+            <div><dt>Journey maps</dt><dd>Discovery → preclinical → trials → decisions</dd></div>
+            <div><dt>20+ platforms</dt><dd>Two rounds of competitive analysis</dd></div>
+          </dl>
+
+          <h3 class="bl-h3">Who we designed for</h3>
+          <div class="kg-personas">
+            <div class="kg-persona">
+              <div class="kg-persona__head"><span class="kg-persona__av" style="background:#2f6f5e">MR</span><div><p class="kg-persona__name">Mila Ross</p><p class="kg-persona__role">Translational scientist · 8+ years · Boston</p></div></div>
+              <p>Bridges the lab and the clinic: turns preclinical findings into biomarker strategies and early-phase trials.</p>
+              <h4>Needs</h4>
+              <ul><li>Turn large, mixed datasets into clear hypotheses</li><li>Prioritise targets with real clinical relevance</li><li>Bring clinicians into the work early</li></ul>
+              <h4>Frustrations</h4>
+              <ul><li>No integrated, interactive way to visualise the data</li><li>Unstructured data she has to clean by hand</li></ul>
+            </div>
+            <div class="kg-persona">
+              <div class="kg-persona__head"><span class="kg-persona__av" style="background:#c46a3a">BC</span><div><p class="kg-persona__name">Ben Carter</p><p class="kg-persona__role">Clinician &amp; medical advisor · 10+ years in trials</p></div></div>
+              <p>Gives the clinical perspective on early programs: is this target relevant, is this patient group right, is it safe?</p>
+              <h4>Needs</h4>
+              <ul><li>Fast, evidence-backed answers between clinical duties</li><li>See preclinical gaps before trial design</li><li>Explain clinical insight to non-clinical teams</li></ul>
+              <h4>Frustrations</h4>
+              <ul><li>Information overload, hard to interpret</li><li>Can't tell how strong the evidence behind a claim is</li></ul>
+            </div>
+          </div>
+
+          <h3 class="bl-h3">What kept coming up</h3>
+          <p>We clustered pain points from both journeys and voted as a team on which ones the product should own first.</p>
+          <div class="kg-pains">
+            <p>Disparate data sources and a massive volume of data<span>Both</span></p>
+            <p>Hard to turn large datasets into clear hypotheses<span>Scientist</span></p>
+            <p>Information overload, limited interpretability<span>Clinician</span></p>
+            <p>Poor visibility into the evidence level behind findings<span>Both</span></p>
+            <p>No holistic view of gene–drug–disease–pathway links<span>Both</span></p>
+            <p>Biomedical knowledge moves faster than anyone can read<span>Both</span></p>
+          </div>
+
+          <div class="bl-split bl-split--wide" style="margin-top:14px">
+            <div class="bl-card bl-card--soft bl-stat">
+              <p class="bl-stat__num">~10 in 10,000</p>
+              <p class="bl-stat__label">compounds found in discovery make it to development. Every bad target caught early saves years.</p>
+            </div>
+            <div class="bl-card bl-card--lav">
+              <h3 class="bl-card__h">The feature list we voted in</h3>
+              <ul class="bl-list"><li>AI query and chat over the graph</li><li>Citations for every outcome</li><li>Insight highlighting and summaries</li><li>Collaboration on a session</li><li>Saved searches and sessions</li></ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== 04 VALIDATION ========== -->
+        <section id="validation" class="bl-section reveal">
+          <p class="bl-kicker"><span>04</span>Validation</p>
+          <h2 class="bl-h2">Six feature ideas, <em>checked against the market</em></h2>
+          <p class="bl-lead">From the research we shortlisted six features. Before designing, I checked how graph and research tools handle each today, what they leave out, and whether to keep the idea as it was or refine it.</p>
+
+          <div class="kg-table-wrap">
+            <table class="kg-table">
+              <thead><tr><th>Feature</th><th>What others do</th><th>Our call</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>Projects: private, public or local</td>
+                  <td><a href="https://docs.kumu.io/overview/kumus-architecture" target="_blank" rel="noopener">Kumu</a> sets privacy and contributors per project. <a href="https://neo4j.com/blog/news/neo4j-offering/" target="_blank" rel="noopener">Neo4j</a> splits cloud (Aura) from self-managed and local (Desktop), often for data-sovereignty rules. Hosting is a <em>product</em> you pick before you start.</td>
+                  <td><span class="kg-verdict kg-verdict--refine">Refine</span><br />Choose where the data lives and who sees it together, per project. Rules stop mistakes, e.g. server-hosted patient data can't go public.</td>
+                </tr>
+                <tr>
+                  <td>AI querying instead of code</td>
+                  <td><a href="https://neo4j.com/docs/bloom-user-guide/current/bloom-visual-tour/search-bar/" target="_blank" rel="noopener">Neo4j Bloom</a> offers near-natural-language search. <a href="https://docs.stardog.com/voicebox" target="_blank" rel="noopener">Stardog Voicebox</a> and <a href="https://graphwise.ai/blog/talk-to-your-graph-on-top-of-nature-first-biodiversity-knowledge-graph/" target="_blank" rel="noopener">GraphDB</a> turn questions into SPARQL. But LLMs <a href="https://neo4j.com/blog/developer/iterative-refinement-for-text2cypher/" target="_blank" rel="noopener">can generate invalid queries</a>.</td>
+                  <td><span class="kg-verdict kg-verdict--refine">Refine</span><br />Show <strong>how the question was understood</strong> as editable chips, plus the validated query and a cited answer.</td>
+                </tr>
+                <tr>
+                  <td>Canvas of connected graphs</td>
+                  <td><a href="https://obsidian.md/canvas" target="_blank" rel="noopener">Obsidian Canvas</a> lays out and nests notes on an infinite space. <a href="https://kumu.io/tour" target="_blank" rel="noopener">Kumu</a> splits one project into many maps. Graph explorers show one scene at a time.</td>
+                  <td><span class="kg-verdict kg-verdict--keep">Keep</span><br />Graphs become frames on a canvas, linked through <strong>shared entities</strong>. AI suggests bridges.</td>
+                </tr>
+                <tr>
+                  <td>Multiplayer with restricted access</td>
+                  <td><a href="https://help.figma.com/hc/en-us/articles/1500006775761" target="_blank" rel="noopener">Figma</a> made live cursors and can view / can edit familiar. <a href="https://doc.linkurious.com/admin-manual/latest/groups/" target="_blank" rel="noopener">Linkurious</a> gives graph roles (read only → read/edit/delete) per data source.</td>
+                  <td><span class="kg-verdict kg-verdict--refine">Refine</span><br />Figma-style roles, plus <strong>page-level restriction</strong> for patient data and owner review for edits.</td>
+                </tr>
+                <tr>
+                  <td>Left: structure · Right: insights · Bottom: editing</td>
+                  <td><a href="https://neo4j.com/docs/aura/explore/explore-visual-tour/legend-panel/" target="_blank" rel="noopener">Neo4j Explore</a> keeps a perspective drawer, a legend panel and an inspector around the scene. Properties, AI and editing end up fighting for the same space.</td>
+                  <td><span class="kg-verdict kg-verdict--keep">Keep</span><br />Give each job one fixed home. Editing stays collapsed until it's needed.</td>
+                </tr>
+                <tr>
+                  <td>Simple UI for huge data</td>
+                  <td><a href="https://cambridge-intelligence.com/how-to-fix-hairballs/" target="_blank" rel="noopener">Cambridge Intelligence</a>: don't expose hairballs, group and filter instead. A <a href="https://www.alphaxiv.org/abs/2008.07944" target="_blank" rel="noopener">2020 study</a> found cognitive load rose with graph complexity, then fell as people gave up.</td>
+                  <td><span class="kg-verdict kg-verdict--keep">Keep</span><br />Made it a principle: show less, dim instead of delete, colour only for meaning.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ========== 05 PRINCIPLES ========== -->
+        <section id="principles" class="bl-section reveal">
+          <p class="bl-kicker"><span>05</span>Principles</p>
+          <h2 class="bl-h2">Five rules <em>for every screen</em></h2>
+          <p class="bl-lead">Research and validation pointed to the same thing: the interface has to stay calm so the data can be loud.</p>
+          <ol class="kg-principles">
+            <li><b>Questions, not queries</b>Anyone can ask in their own words. The query is there for those who want it.</li>
+            <li><b>Show the work</b>Every AI answer and every edge leads back to a source.</li>
+            <li><b>Less on screen</b>Dim, group and collapse before showing everything.</li>
+            <li><b>Data has a home</b>Where data lives and who sees it is clear on every screen.</li>
+            <li><b>Science is a team sport</b>Live presence, comments and reviewed edits, not emailed exports.</li>
+          </ol>
+          <ul class="kg-entities" aria-label="Entity colours">
+            <li><i style="background:var(--kg-gene)"></i>Gene</li><li><i style="background:var(--kg-drug)"></i>Drug</li><li><i style="background:var(--kg-disease)"></i>Disease</li><li><i style="background:var(--kg-path)"></i>Pathway</li><li><i style="background:var(--kg-bio)"></i>Biomarker</li><li><i style="background:var(--kg-trial)"></i>Trial</li><li><i style="background:var(--bl-purple)"></i>AI (and only AI)</li>
+          </ul>
+        </section>
+
+        <!-- ========== 06 DECISIONS ========== -->
+        <section id="decisions" class="bl-section reveal">
+          <p class="bl-kicker"><span>06</span>Key decisions</p>
+          <h2 class="bl-h2">From sketch <em>to system</em></h2>
+          <p class="bl-lead">I started with paper sketches of the workspace and the canvas, then grew them into the information architecture below.</p>
+
+          <div class="kg-from">
+            <figure class="kg-sketch"><img src="assets/case-studies/kg/sketch.jpg" alt="Hand-drawn sketch: file and project icons on the left, layers of knowledge graphs, a single graph in the middle, an AI insights summary on the right, an editing tool at the bottom, multiplayer avatars at the top, and a second sketch with multiple connected graphs" width="1280" height="702" loading="lazy" /><figcaption>Concept sketches: one graph, then many graphs connected on a canvas.</figcaption></figure>
+            <figure class="kg-shot"><img src="assets/case-studies/kg/workspace.jpg" alt="The final workspace" width="2400" height="1500" loading="lazy" /><figcaption>The same structure in the final workspace.</figcaption></figure>
+          </div>
+
+          <h3 class="bl-h3">Information architecture</h3>
+          <div class="kg-ia">
+            <div class="kg-ia__col"><h4>Project</h4><p>Where it lives, who can open it</p><ul><li>Hosting<small>Cloud · org server · this computer</small></li><li>Visibility<small>Only me · team · public</small></li><li>People &amp; roles</li></ul></div>
+            <div class="kg-ia__col"><h4>Pages</h4><p>One question per page</p><ul><li>Graph page<small>One graph, explored deeply</small></li><li>Canvas page<small>Many graphs, connected</small></li><li>Restricted page<small>e.g. patient cohort</small></li></ul></div>
+            <div class="kg-ia__col"><h4>Layers</h4><p>What you can show or hide</p><ul><li>Entity types<small>Genes, drugs, diseases…</small></li><li>AI query results</li><li>Comments · sources</li></ul></div>
+            <div class="kg-ia__col"><h4>Around the canvas</h4><p>Fixed homes for each job</p><ul><li>Insights · Inspector<small>Right panel</small></li><li>Ask<small>Prompt bar + right panel</small></li><li>Edit graph<small>Bottom drawer</small></li></ul></div>
+          </div>
+
+          <div class="bl-gap"></div>
+
+          <article class="kg-dec kg-dec--wide">
+            <div>
+              <p class="kg-dec__num">Decision 01</p>
+              <h3 class="kg-dec__title">Give every job a fixed home</h3>
+            </div>
+            <figure class="kg-shot kg-anno">
+              <img src="assets/case-studies/kg/workspace.jpg" alt="Workspace: pages and layers on the left, the graph in the middle with a prompt bar, AI insights on the right, an edit drawer at the bottom and collaborators at the top" width="2400" height="1500" loading="lazy" />
+              <span class="kg-pin" style="left:12%;top:36%">1</span>
+              <span class="kg-pin" style="left:38%;top:30%">2</span>
+              <span class="kg-pin" style="left:29%;top:91%">3</span>
+              <span class="kg-pin" style="left:86%;top:27%">4</span>
+              <span class="kg-pin" style="left:22%;top:97.5%">5</span>
+              <span class="kg-pin" style="left:87%;top:7%">6</span>
+            </figure>
+            <ol class="kg-zones">
+              <li><span><b>Left: where you are.</b> Projects, pages and layers, with an eye toggle per entity type.</span></li>
+              <li><span><b>Centre: the graph.</b> Only entity types get colour; the chrome stays grey.</span></li>
+              <li><span><b>Ask bar.</b> A plain-language question about what's on screen.</span></li>
+              <li><span><b>Right: what you're looking at.</b> AI summary, findings and sources for the selection.</span></li>
+              <li><span><b>Bottom: change it.</b> The edit drawer stays collapsed until you need it.</span></li>
+              <li><span><b>Top: who's here.</b> Live collaborators, hosting status and sharing.</span></li>
+            </ol>
+            <div class="kg-dec__text">
+              <dl><dt>Why</dt><dd>The research showed two modes, reading and changing. Clinicians mostly read, scientists switch between both. Separating them keeps the reading view quiet.</dd></dl>
+              <dl><dt>Trade-off</dt><dd>Three panels take space from the graph. Every panel collapses, and the canvas recentres when they do.</dd></dl>
+            </div>
+          </article>
+
+          <article class="kg-dec">
+            <div class="kg-dec__text">
+              <p class="kg-dec__num">Decision 02</p>
+              <h3 class="kg-dec__title">Ask in plain language, and see what the AI understood</h3>
+              <p>Mila asks: "Which approved drugs target EGFR in NSCLC, and which mutations make them stop working?" Before the answer, KG Hub shows how it read the question, as chips she can edit.</p>
+              <dl>
+                <dt>Why</dt><dd>Generated queries can be wrong. A scientist won't act on an answer she can't check. Chips let a clinician check it, and the validated Cypher lets a bioinformatician copy it.</dd>
+                <dt>Trade-off</dt><dd>More on screen than a chatbot answer. The query is collapsed by default for people with view access.</dd>
+                <dt>Detail</dt><dd>The answer becomes a layer on the graph, and everything outside it is dimmed, not removed, so context is never lost.</dd>
+              </dl>
+            </div>
+            <div class="kg-dec__media">
+              <figure class="kg-shot"><img src="assets/case-studies/kg/ai-query.jpg" alt="AI query: the question, how it was understood as chips, the generated Cypher query marked valid, a cited answer and a table, with the result highlighted on the graph" width="2400" height="1500" loading="lazy" /></figure>
+            </div>
+          </article>
+
+          <article class="kg-dec">
+            <div class="kg-dec__text">
+              <p class="kg-dec__num">Decision 03</p>
+              <h3 class="kg-dec__title">A canvas for many graphs, connected by what they share</h3>
+              <p>Each graph sits on the canvas as a frame. When two graphs contain the same entity, such as osimertinib, KG Hub draws a <strong>bridge</strong> between them and the insights panel reasons across all of them.</p>
+              <dl>
+                <dt>Why</dt><dd>Real questions span graphs: signalling, resistance, trials and patients. Merging everything into one graph gives a hairball; separate tabs lose the links.</dd>
+                <dt>Trade-off</dt><dd>Frames show a summary, not every node. Double-click opens the full graph page.</dd>
+                <dt>Detail</dt><dd>AI suggests bridges to public graphs, but only links them on a click. Restricted graphs show as locked frames.</dd>
+              </dl>
+            </div>
+            <div class="kg-dec__media">
+              <figure class="kg-shot"><img src="assets/case-studies/kg/canvas.jpg" alt="Canvas with four graph frames (EGFR signalling, resistance mechanisms, trial evidence and a locked patient cohort) connected by dashed bridges labelled by shared entities, with a suggested bridge card and live cursors" width="2400" height="1500" loading="lazy" /></figure>
+            </div>
+          </article>
+
+          <article class="kg-dec">
+            <div class="kg-dec__text">
+              <p class="kg-dec__num">Decision 04</p>
+              <h3 class="kg-dec__title">Editing that keeps the evidence</h3>
+              <p>The bottom drawer turns the graph into a table you can edit, next to a form for new relationships. Relationship types come from the schema, so nobody types "inhibits" three different ways.</p>
+              <dl>
+                <dt>Why</dt><dd>"Citations for every outcome" was a top-voted need. A shared graph is only trustworthy if every edge has a source.</dd>
+                <dt>Trade-off</dt><dd>A required source slows quick edits. Unsourced edits are saved as private drafts instead of being blocked.</dd>
+                <dt>Detail</dt><dd>Edits to shared graphs go to the owner for review, and every change, including AI suggestions, shows in the history.</dd>
+              </dl>
+            </div>
+            <div class="kg-dec__media">
+              <figure class="kg-shot"><img src="assets/case-studies/kg/edit.jpg" alt="Edit drawer: a table of relationships with evidence, a draft relationship C797S resists osimertinib that still needs a source, and the change history in the inspector" width="2400" height="1500" loading="lazy" /></figure>
+            </div>
+          </article>
+
+          <article class="kg-dec">
+            <div class="kg-dec__text">
+              <p class="kg-dec__num">Decision 05</p>
+              <h3 class="kg-dec__title">Decide where data lives at the start, and keep it visible</h3>
+              <p>A new project asks two things together: where the data lives (cloud, your organisation's server, or this computer) and who can open it.</p>
+              <dl>
+                <dt>Why</dt><dd>Competitors treat hosting as a separate product. For patient data it's the first question compliance asks, so it belongs at creation.</dd>
+                <dt>Trade-off</dt><dd>One more step before a project exists. A recommended default and plain-language consequences keep it fast.</dd>
+                <dt>Detail</dt><dd>Hosting and visibility show as a badge on every project card and in the top bar.</dd>
+              </dl>
+            </div>
+            <div class="kg-dec__media">
+              <figure class="kg-shot"><img src="assets/case-studies/kg/new-project.jpg" alt="New project dialog: choose KG Hub cloud, your organisation's server or only this computer, then only me, my team or public, with a note that server projects can't be public" width="2400" height="1500" loading="lazy" /></figure>
+              <figure class="kg-shot"><img src="assets/case-studies/kg/projects.jpg" alt="Projects home with cards showing hosting and visibility badges: org server, private, public library, team and this computer" width="2400" height="1500" loading="lazy" /></figure>
+            </div>
+          </article>
+
+          <article class="kg-dec">
+            <div class="kg-dec__text">
+              <p class="kg-dec__num">Decision 06</p>
+              <h3 class="kg-dec__title">Multiplayer with restrictions</h3>
+              <p>Roles anyone who has used Figma will recognise: owner, can edit, can comment, can view. On top of them, individual pages can be restricted.</p>
+              <dl>
+                <dt>Why</dt><dd>A clinician and a scientist need to work in the same graph, but a patient cohort can't be visible to every collaborator.</dd>
+                <dt>Trade-off</dt><dd>Page restrictions add one concept. They live in the share dialog, where people already look for access.</dd>
+                <dt>Detail</dt><dd>Public links are switched off for projects with patient-level data. Instead, KG Hub offers to publish a de-identified copy.</dd>
+              </dl>
+            </div>
+            <div class="kg-dec__media">
+              <figure class="kg-shot"><img src="assets/case-studies/kg/share.jpg" alt="Share dialog with people and roles, page restrictions with the patient cohort limited to owner and editors, and general access restricted" width="2400" height="1500" loading="lazy" /></figure>
+            </div>
+          </article>
+        </section>
+
+        <!-- ========== 07 FINAL FLOW ========== -->
+        <section id="solution" class="bl-section reveal">
+          <p class="bl-kicker"><span>07</span>Final flow</p>
+          <h2 class="bl-h2">One question, <em>start to finish</em></h2>
+          <p class="bl-lead">Mila investigates why patients stop responding to EGFR drugs, and brings Ben in. Click any screen to open it full size.</p>
+          <ol class="kg-flow">
+            <li><a href="assets/case-studies/kg/new-project.jpg" target="_blank" rel="noopener"><img src="assets/case-studies/kg/new-project.jpg" alt="New project dialog" width="2400" height="1500" loading="lazy" /></a><p><b>Create</b> a project on the hospital's server, shared with her team.</p></li>
+            <li><a href="assets/case-studies/kg/workspace.jpg" target="_blank" rel="noopener"><img src="assets/case-studies/kg/workspace.jpg" alt="Workspace" width="2400" height="1500" loading="lazy" /></a><p><b>Explore</b> the EGFR graph; AI summarises the selected drug with sources.</p></li>
+            <li><a href="assets/case-studies/kg/ai-query.jpg" target="_blank" rel="noopener"><img src="assets/case-studies/kg/ai-query.jpg" alt="AI query" width="2400" height="1500" loading="lazy" /></a><p><b>Ask</b> which drugs stop working and why. Save the answer as a layer.</p></li>
+            <li><a href="assets/case-studies/kg/canvas.jpg" target="_blank" rel="noopener"><img src="assets/case-studies/kg/canvas.jpg" alt="Canvas" width="2400" height="1500" loading="lazy" /></a><p><b>Map</b> it next to trials and the patient cohort on the canvas.</p></li>
+            <li><a href="assets/case-studies/kg/edit.jpg" target="_blank" rel="noopener"><img src="assets/case-studies/kg/edit.jpg" alt="Edit drawer" width="2400" height="1500" loading="lazy" /></a><p><b>Edit</b>: Ben adds a resistance link; it waits for a source and review.</p></li>
+            <li><a href="assets/case-studies/kg/share.jpg" target="_blank" rel="noopener"><img src="assets/case-studies/kg/share.jpg" alt="Share dialog" width="2400" height="1500" loading="lazy" /></a><p><b>Share</b> with the wider team, keeping the patient page restricted.</p></li>
+          </ol>
+        </section>
+
+        <!-- ========== 08 REFLECTION ========== -->
+        <section id="reflection" class="bl-section reveal">
+          <p class="bl-kicker"><span>08</span>Reflection</p>
+          <h2 class="bl-h2">Designing AI for experts <em>means showing the work</em></h2>
+          <p class="bl-lead">The hardest part wasn't the graph. It was deciding what not to show, and making every AI answer something a scientist would be willing to defend in a meeting.</p>
+          <h3 class="bl-h3 bl-h3--flush">What I'd test next</h3>
+          <ul class="kg-next">
+            <li><b>First question without training</b><span>Can a clinician get a correct, cited answer in under two minutes on first use?</span></li>
+            <li><b>Trust in AI answers</b><span>Compare confidence ratings with and without the "understood as" chips and sources.</span></li>
+            <li><b>Canvas at scale</b><span>At how many frames do bridges stop helping? Where does grouping need to kick in?</span></li>
+            <li><b>Watched entities</b><span>Research asked for alerts when new trials or papers touch a followed gene. That's the next feature to design.</span></li>
+          </ul>
+
+          <div class="kg-sources">
+            <p><strong style="color:var(--bl-ink)">Sources for the validation.</strong> Product documentation and research, accessed November 2026.</p>
+            <ol>
+              <li><a href="https://neo4j.com/docs/bloom-user-guide/current/bloom-visual-tour/search-bar/" target="_blank" rel="noopener">Neo4j Bloom: search bar</a></li>
+              <li><a href="https://neo4j.com/blog/developer/iterative-refinement-for-text2cypher/" target="_blank" rel="noopener">Neo4j: iterative refinement for Text2Cypher</a></li>
+              <li><a href="https://docs.stardog.com/voicebox" target="_blank" rel="noopener">Stardog Voicebox documentation</a></li>
+              <li><a href="https://graphwise.ai/blog/talk-to-your-graph-on-top-of-nature-first-biodiversity-knowledge-graph/" target="_blank" rel="noopener">Graphwise GraphDB: Talk to Your Graph</a></li>
+              <li><a href="https://docs.kumu.io/overview/kumus-architecture" target="_blank" rel="noopener">Kumu: projects, maps and views</a></li>
+              <li><a href="https://neo4j.com/blog/news/neo4j-offering/" target="_blank" rel="noopener">Neo4j: choosing between Aura and self-managed</a></li>
+              <li><a href="https://obsidian.md/canvas" target="_blank" rel="noopener">Obsidian Canvas</a></li>
+              <li><a href="https://help.figma.com/hc/en-us/articles/1500006775761" target="_blank" rel="noopener">Figma: multiplayer and permissions</a></li>
+              <li><a href="https://doc.linkurious.com/admin-manual/latest/groups/" target="_blank" rel="noopener">Linkurious Enterprise: access control</a></li>
+              <li><a href="https://neo4j.com/docs/aura/explore/explore-visual-tour/legend-panel/" target="_blank" rel="noopener">Neo4j Explore: legend panel</a></li>
+              <li><a href="https://cambridge-intelligence.com/how-to-fix-hairballs/" target="_blank" rel="noopener">Cambridge Intelligence: fixing data hairballs</a></li>
+              <li><a href="https://www.alphaxiv.org/abs/2008.07944" target="_blank" rel="noopener">Yoghourdjian et al., Scalability of Network Visualisation from a Cognitive Load Perspective (2020)</a></li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="bl-section bl-end reveal">
+          <p class="bl-end__text">Thanks for reading! <em>Some details stay under NDA, so ask me about the rest.</em></p>
+          <div class="bl-end__links">
+            <a href="index.html#work" class="bl-back">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7.5 3.5 3 8l4.5 4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              All work
+            </a>
+            <a href="case-study-bloopy.html" class="bl-next">Next: Bloopy - Exploring life beyond work →</a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__cta">Open to internship opportunities</p>
+        <p class="footer__small"><a href="mailto:vprajaktacs09@gmail.com">vprajaktacs09@gmail.com</a><br />Made with &lt;3 @ 2026 Prajakta Vispute</p>
+      </div>
+      <nav class="footer__links" aria-label="Social">
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Behance</a>
+        <a href="https://drive.google.com/drive/folders/1hAsbrjrW87Lb0qt52RB3qjIFTZk93kbB" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Contents: highlight the section currently in view.
+    (function () {
+      const links = [...document.querySelectorAll(".bl-toc a")];
+      const map = new Map(links.map((a) => [a.getAttribute("href").slice(1), a]));
+      if (!("IntersectionObserver" in window)) return;
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            links.forEach((a) => a.classList.remove("is-active"));
+            const a = map.get(e.target.id);
+            if (a) a.classList.add("is-active");
+          }
+        });
+      }, { rootMargin: "-35% 0px -60% 0px" });
+      map.forEach((_, id) => { const s = document.getElementById(id); if (s) io.observe(s); });
+    })();
+  </script>
+</body>
+</html>
