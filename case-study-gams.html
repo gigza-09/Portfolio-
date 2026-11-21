@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Designing Visualisations for Group Activity Metrics — Prajakta Vispute</title>
+  <meta name="description" content="Case study: designing group activity visualisations with older adult walking communities in Dhule, Mandi and Guwahati. Special mention at India HCI 2026 SRC." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Geist:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,900&family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/case-study.css" />
+</head>
+<body class="cs-page">
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="brand" aria-label="Prajakta Vispute — home">
+        <span class="brand__logo">P.</span>
+        <span class="brand__name">Prajakta Vispute</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html#work" class="nav__link is-active">Work</a>
+        <a href="index.html#showcase" class="nav__link">Showcase</a>
+        <a href="index.html#about" class="nav__link">About</a>
+        <a href="https://drive.google.com/drive/folders/1hAsbrjrW87Lb0qt52RB3qjIFTZk93kbB" class="nav__link nav__link--strong" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cs">
+    <div class="cs-wrap">
+      <a href="index.html#work" class="cs-back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7.5 3.5 3 8l4.5 4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All work
+      </a>
+    </div>
+
+    <!-- 1. A voice from the field -->
+    <section class="cs-wrap">
+      <div class="cs-cover">
+        <div class="cs-cover__top">
+          <div class="cs-cover__bar">
+            <p class="cs-eyebrow">A voice from the field</p>
+            <p class="cs-eyebrow">Special mention @ India HCI 2026 SRC 🌟</p>
+          </div>
+          <div class="cs-cover__body">
+            <blockquote class="cs-cover__quote">
+              <p>As a retired person I usually don’t have much to do, got a thing to look forward to everyday</p>
+              <cite>Participant D-G2-P1, Dhule</cite>
+            </blockquote>
+            <div class="cs-cover__art">
+              <img class="cs-cover__sparkle" src="assets/case-studies/gams/sparkle.png" alt="" width="151" height="154" />
+              <img class="cs-cover__elders" src="assets/case-studies/gams/hero-elders.png" alt="Illustration of three older men walking together" width="456" height="448" />
+            </div>
+          </div>
+        </div>
+        <div class="cs-cover__foot">
+          <div>
+            <h1 class="cs-title">Designing Visualisations for Group Activity Metrics</h1>
+            <p class="cs-sub">Contextual Insights from older adult walking communities across India</p>
+          </div>
+          <img class="cs-cover__logos" src="assets/case-studies/gams/logos.png" alt="Google, IDC School of Design, India HCI 2026" width="691" height="183" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. The problem -->
+    <section class="cs-wrap cs-section reveal">
+      <h2 class="cs-h2">The Problem</h2>
+      <p class="cs-lead">India is projected to have <strong>230 million older adults</strong> by 2036, highlighting the growing need for healthy ageing.</p>
+
+      <ol class="cs-chain">
+        <li class="cs-card cs-coral">
+          <strong>Healthy aging is inclusion of:</strong>
+          <span><b>Regular physical activities</b><br />Appropriate Diet &amp; Nutrition<br />Preventive Health Check ups</span>
+        </li>
+        <li class="cs-card cs-lilac cs-center"><span><b>Walking is easy to start</b><br />No equipment needed.</span></li>
+        <li class="cs-card cs-sky cs-center"><span>Most fitness trackers primarily focus on <b>individual step counts.</b></span></li>
+        <li class="cs-card cs-lime cs-center"><span><b>Socializing</b> strongly motivates walking<br />(Gadahad et al.)</span></li>
+      </ol>
+
+      <div class="cs-gams">
+        <div class="cs-gams__col">
+          <h3 class="cs-h4">So, What are GAMs?</h3>
+          <div class="cs-white">
+            <p>Group Activity Metric which transform individual walking numbers into shared group progress</p>
+            <p>Through Visualizations + Social Sharing</p>
+          </div>
+        </div>
+        <div class="cs-gams__col cs-gams__col--sm">
+          <h3 class="cs-h4">How are they designed?</h3>
+          <ul class="cs-white cs-bullets">
+            <li>Balance</li><li>Clarity</li><li>Facilitation</li>
+          </ul>
+        </div>
+        <div class="cs-gams__word">
+          <span>GAMs</span>
+          <strong>Group Activity Metrics</strong>
+          <small>(Gadahad et. al., CHI 2026)</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. The question + our study -->
+    <section class="cs-wrap cs-section reveal">
+      <h2 class="cs-h2">The question we asked</h2>
+      <p class="cs-lead cs-lead--muted">How do older adults in different Indian communities experience GAMs?</p>
+
+      <h3 class="cs-h3">Our Study</h3>
+      <div class="cs-study">
+        <img class="cs-study__map" src="assets/case-studies/gams/india-map.png" alt="Map of India marking the three study sites: Mandi in Himachal Pradesh, Guwahati in Assam, and Dhule in Maharashtra" width="558" height="670" loading="lazy" />
+        <div class="cs-study__grid">
+          <div class="cs-stat"><b>23</b><span>Participants</span></div>
+          <div class="cs-card cs-coral cs-vcenter"><p>Ethics approval was obtained; all participants provided informed consent, and participation was voluntary, with step-count sharing disclosed</p></div>
+          <div class="cs-stat"><b>8</b><span>Weeks</span></div>
+          <div class="cs-card cs-lime cs-vcenter"><p>Groups of familiar participants were formed.</p></div>
+          <div class="cs-stat"><b>60 <small>to</small> 76</b><span>Years old</span></div>
+          <div class="cs-card cs-lilac cs-vcenter cs-row">
+            <p>Each group used the ‘Walkmitra’ app and a private WhatsApp group.</p>
+            <span class="cs-apps">
+              <img src="assets/case-studies/gams/walkmitra.png" alt="Walkmitra app icon" width="48" height="48" />
+              <img src="assets/case-studies/gams/walkmitra-v2.png" alt="Walkmitra V2 app icon" width="48" height="50" />
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. What participants saw -->
+    <section class="cs-wrap cs-section">
+      <h2 class="cs-h2 reveal">What Participants Saw</h2>
+      <p class="cs-note reveal">These visualisations were designed based on GAMs principles and users’ context relevance.</p>
+
+      <h3 class="cs-h3 reveal">Dhule</h3>
+      <div class="cs-vizgrid reveal">
+        <figure class="cs-viz cs-lilac">
+          <figcaption><b>Moon (Pournima) Challenge</b> – Dynamic</figcaption>
+          <div class="cs-viz__imgs cs-viz__imgs--moon">
+            <img src="assets/case-studies/gams/dhule-moon-phone.png" alt="Phone screen showing the group's moon at 12% full" width="167" height="251" loading="lazy" />
+            <img src="assets/case-studies/gams/dhule-moon-sky.png" alt="Moon phases filling from 10% to 100% as the group walks" width="440" height="247" loading="lazy" />
+          </div>
+        </figure>
+        <figure class="cs-viz cs-lilac">
+          <figcaption><b>Weekly bar graphs</b> – Dynamic</figcaption>
+          <div class="cs-viz__imgs"><img src="assets/case-studies/gams/dhule-weekly-bars.png" alt="Bar charts comparing previous week and this week, for one participant and the whole group" width="641" height="234" loading="lazy" /></div>
+        </figure>
+        <figure class="cs-viz cs-lilac">
+          <figcaption><b>Color - coded steps</b> – Dynamic</figcaption>
+          <div class="cs-viz__imgs"><img src="assets/case-studies/gams/dhule-colour-steps.png" alt="Daily goal bars per participant and a weekly grid of colour-coded dots" width="630" height="253" loading="lazy" /></div>
+        </figure>
+        <figure class="cs-viz cs-lilac">
+          <figcaption><b>Rangoli</b> – Static</figcaption>
+          <div class="cs-viz__imgs"><img src="assets/case-studies/gams/dhule-rangoli.png" alt="Rangoli-style weekly grid showing each participant's goal status" width="301" height="254" loading="lazy" /></div>
+        </figure>
+      </div>
+
+      <h3 class="cs-h3 reveal">Mandi</h3>
+      <div class="cs-mandi reveal">
+        <figure class="cs-viz cs-lime">
+          <figcaption class="cs-center-text"><b>Constellation</b> – Dynamic</figcaption>
+          <div class="cs-viz__imgs"><img src="assets/case-studies/gams/mandi-constellation.png" alt="Constellation where each participant is a star that lights up as goals are reached" width="435" height="462" loading="lazy" /></div>
+        </figure>
+        <figure class="cs-viz cs-lime">
+          <figcaption class="cs-center-text"><b>Snowflake</b> – Dynamic</figcaption>
+          <div class="cs-viz__imgs"><img src="assets/case-studies/gams/mandi-snowflake.png" alt="Snowflake with one arm per participant, P1 to P6, growing with their steps" width="478" height="456" loading="lazy" /></div>
+        </figure>
+        <figure class="cs-panel">
+          <figcaption>What moderator saw: Control Panel</figcaption>
+          <img src="assets/case-studies/gams/mandi-control-panel.png" alt="Moderator control panel with challenge stats per participant and quick controls" width="407" height="612" loading="lazy" />
+        </figure>
+      </div>
+
+      <h3 class="cs-h3 reveal">Guwahati</h3>
+      <figure class="cs-viz cs-sky cs-diya reveal">
+        <figcaption><b>Diya</b> – Shared 8 to 9 Days</figcaption>
+        <div class="cs-viz__imgs"><img src="assets/case-studies/gams/guwahati-diya.png" alt="Five diyas, one per participant, glowing brighter with more steps" width="797" height="220" loading="lazy" /></div>
+      </figure>
+    </section>
+
+    <!-- 5. Timeline -->
+    <section class="cs-wrap cs-section reveal">
+      <h2 class="cs-h2">Eight Weeks In the Field Study</h2>
+      <div class="cs-tl">
+      <div class="cs-weeks" aria-hidden="true"><span style="--c:1">1</span><span style="--c:2">2</span><span style="--c:3">3</span><span style="--c:4">4</span><span style="--c:5">5</span><span style="--c:6">6</span><span style="--c:7">7</span><span style="--c:8">8</span></div>
+      <ol class="cs-timeline" aria-label="Study timeline by week">
+        <li class="cs-step cs-coral" style="--from:1;--to:3;--row:1" data-weeks="1–2"><b>Recruitment</b><span>Finding and recruiting participants and conducting pre-intervention interviews.</span></li>
+        <li class="cs-step cs-lilac" style="--from:2;--to:4;--row:2" data-weeks="2–3"><b>Onboarding</b><span>Onboarding Participants</span></li>
+        <li class="cs-step cs-sky" style="--from:4;--to:5;--row:1" data-weeks="4"><b>Baseline Goals</b><span>Setting baseline goals, based on participants’ observed average</span></li>
+        <li class="cs-step cs-lime" style="--from:5;--to:6;--row:2" data-weeks="5"><b>Initial GAMs</b><span>Designed and tested them</span></li>
+        <li class="cs-step cs-coral" style="--from:6;--to:7;--row:1" data-weeks="6"><b>Mid Interviews</b><span>Revise the GAMs</span></li>
+        <li class="cs-step cs-lilac" style="--from:7;--to:9;--row:1" data-weeks="7–8"><b>Revised GAMs</b><span>Tested then, Post - Intervention interviews. Final evaluation.</span></li>
+      </ol>
+      </div>
+      <p class="cs-small">The numbers are weeks. The timing of the steps differed between sites.</p>
+    </section>
+
+    <!-- 6. What emerged -->
+    <section class="cs-wrap cs-section cs-emerged reveal">
+      <div class="cs-emerged__side">
+        <h2 class="cs-h2 cs-h2--xl">What Emerged Across the Groups</h2>
+        <p>Shared visualisations also appeared to foster curiosity and social interaction.</p>
+        <img src="assets/case-studies/gams/elders-group.png" alt="Illustration of four older adults walking and greeting each other" width="810" height="395" loading="lazy" />
+      </div>
+      <div class="cs-emerged__list">
+        <div class="cs-card cs-coral cs-big"><h3>Checking Progress</h3><p>Participants appeared to check their own and others’ progress regularly.</p></div>
+        <div class="cs-card cs-lilac cs-big"><h3>Seeing others’ steps</h3><p>“When I saw P1’s steps I felt so motivated that I now want to walk more than one time a day.” M-G1-P4</p></div>
+        <div class="cs-card cs-sky cs-big"><h3>Recognition from the group</h3><p>“When my step count is high, I receive calls from others appreciating me. It feels very encouraging, and I try to do the same every day.” A-G1-P1</p></div>
+      </div>
+    </section>
+
+    <!-- 7. A story from each site -->
+    <section class="cs-wrap cs-section reveal">
+      <h2 class="cs-h2">A story from each site</h2>
+      <div class="cs-stories">
+        <article class="cs-story cs-coral">
+          <span class="cs-tag">Guwahati</span>
+          <h3>Steps became a topic of conversation</h3>
+          <p>Viz 1c drew mostly views and thumbs up. We draw no conclusions about it.</p>
+          <blockquote>“Whenever we meet or talk on the phone, the WalkMitra app and walking come up in the conversation. It feels very healthy and motivating.”<cite>A-G1-P3</cite></blockquote>
+        </article>
+        <article class="cs-story cs-sky">
+          <span class="cs-tag">Dhule</span>
+          <h3>Curiosity around a shared moon</h3>
+          <p>Viz 2a was completed in 5 days. The target may have been easy. We do not read it as a success.</p>
+          <blockquote>“My curiosity is growing! I want to see whether we can complete this in five days.”<cite>D-G2-P2</cite></blockquote>
+        </article>
+        <article class="cs-story cs-lime">
+          <span class="cs-tag">Mandi</span>
+          <h3>Walking for members who could not</h3>
+          <p>We read this as accountability and care within the group.</p>
+          <blockquote>“I felt like walking even more so that I can make sure our group reaches their goal in place of people who are not able to walk.”<cite>M-G2-P1</cite></blockquote>
+        </article>
+      </div>
+    </section>
+
+    <!-- 8. What we learnt -->
+    <section class="cs-wrap cs-section reveal">
+      <h2 class="cs-h2">What we learnt about GAMs</h2>
+      <div class="cs-learnt">
+        <div class="cs-learn cs-coral">
+          <span class="cs-learn__art"><img src="assets/case-studies/gams/learn-everyday-life.png" alt="" width="222" height="207" loading="lazy" /></span>
+          <div><h3>Fit everyday life</h3><p>Some women did not carry phones while walking. Their clothes had no pockets. This affected step tracking.</p></div>
+        </div>
+        <div class="cs-learn cs-lilac">
+          <span class="cs-learn__art"><img src="assets/case-studies/gams/learn-phone-comfort.png" alt="" width="139" height="258" loading="lazy" /></span>
+          <div><h3>Expect different comfort with phones</h3><p>Comfort with the phone varied even among the oldest participants.</p></div>
+        </div>
+        <div class="cs-learn cs-sky">
+          <span class="cs-learn__art"><span class="cs-learn__q" aria-hidden="true">?</span><img src="assets/case-studies/gams/learn-syncing.png" alt="" width="159" height="191" loading="lazy" /></span>
+          <div><h3>Make syncing easy</h3><p>Some participants forgot to open the app. They needed a reminder call.</p></div>
+        </div>
+        <div class="cs-learn cs-lime">
+          <span class="cs-learn__art"><img src="assets/case-studies/gams/learn-familiar.png" alt="" width="144" height="216" loading="lazy" /></span>
+          <div><h3>Use familiar images</h3><p>Familiar visualisations appeared to raise interest. If the visualisations were too complicated the participants disengaged.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Conclusion -->
+    <section class="cs-wrap cs-section reveal">
+      <h2 class="cs-h2">From Individual steps to shared experiences</h2>
+      <div class="cs-card cs-pink cs-limits">
+        <h3>Limitations</h3>
+        <p>This is a small qualitative study. Each site saw different visualisations. We recruited people we already knew. We moderated the groups in our own areas. Our presence as moderators may have affected the accountability in the groups. The app had sync issues. Some people did not carry their phones while walking.</p>
+      </div>
+      <div class="cs-concl">
+        <div class="cs-card cs-coral cs-concl__main">
+          <p class="cs-eyebrow">Conclusion</p>
+          <p class="cs-concl__text">Overall, the study suggests that shared visualisations and social accountability may support walking habits.</p>
+        </div>
+        <ul class="cs-concl__points">
+          <li class="cs-card cs-lime">Shared progress can spark curiosity and conversation.</li>
+          <li class="cs-card cs-lilac">The group itself can create accountability.</li>
+          <li class="cs-card cs-sky">Design has to fit people’s daily lives.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 10. Thank you -->
+    <section class="cs-wrap cs-section reveal">
+      <div class="cs-thanks">
+        <div>
+          <p class="cs-eyebrow">India HCI Student Research Consortium</p>
+          <h2 class="cs-thanks__h">Thank you</h2>
+          <p class="cs-thanks__lead">With thanks to the 23 older adults who walked with us.</p>
+          <p class="cs-thanks__title">Designing Visualisations for Group Activity Metrics</p>
+          <p class="cs-sub">Contextual Insights from older adult walking communities across India</p>
+          <p class="cs-eyebrow cs-thanks__team">Prajakta | Mehuli | Vasundhara</p>
+        </div>
+        <div class="cs-thanks__art"><img src="assets/case-studies/gams/thank-you.png" alt="Illustration of a smiling older woman with a walking stick" width="513" height="601" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <nav class="cs-wrap cs-next">
+      <a href="index.html#work" class="cs-back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7.5 3.5 3 8l4.5 4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to all work
+      </a>
+    </nav>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__cta">Open to internship opportunities</p>
+        <p class="footer__small"><a href="mailto:vprajaktacs09@gmail.com">vprajaktacs09@gmail.com</a><br />Made with &lt;3 @ 2026 Prajakta Vispute</p>
+      </div>
+      <nav class="footer__links" aria-label="Social">
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Behance</a>
+        <a href="https://drive.google.com/drive/folders/1hAsbrjrW87Lb0qt52RB3qjIFTZk93kbB" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

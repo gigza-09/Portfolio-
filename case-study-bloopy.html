@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bloopy — Exploring life beyond work · Prajakta Vispute</title>
+  <meta name="description" content="Case study: Bloopy, a gamified mobile app that helps working professionals switch off from work, reconnect with what they enjoy and recover together." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/bloopy.css" />
+</head>
+<body class="bl-page">
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="brand" aria-label="Prajakta Vispute — home">
+        <span class="brand__logo">P.</span>
+        <span class="brand__name">Prajakta Vispute</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html#work" class="nav__link is-active">Work</a>
+        <a href="index.html#showcase" class="nav__link">Showcase</a>
+        <a href="index.html#about" class="nav__link">About</a>
+        <a href="https://drive.google.com/drive/folders/1hAsbrjrW87Lb0qt52RB3qjIFTZk93kbB" class="nav__link nav__link--strong" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="bl">
+
+    <!-- ========== HERO (same size and position as the GAMs case study cover) ========== -->
+    <div class="bl-banner-wrap">
+      <a href="index.html#work" class="bl-back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7.5 3.5 3 8l4.5 4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All work
+      </a>
+      <section class="bl-hero">
+        <img src="assets/case-studies/bloopy/hero.jpg" alt="Bloopy — Exploring life beyond work! A hand holds a phone showing six activity tiles: sense, explore, craft, observe, move and reflect" width="1728" height="820" />
+      </section>
+    </div>
+
+    <div class="bl-wrap bl-layout">
+
+      <!-- Sticky contents -->
+      <nav class="bl-toc" aria-label="Case study contents">
+        <p class="bl-toc__title">Contents</p>
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#problem">Problem</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#ideation">Ideation</a></li>
+          <li><a href="#intervention">Intervention</a></li>
+          <li><a href="#decisions">Key decisions</a></li>
+          <li><a href="#solution">Solution</a></li>
+        </ol>
+      </nav>
+
+      <div class="bl-content">
+
+        <!-- ========== 01 OVERVIEW ========== -->
+        <section id="overview" class="bl-section">
+          <ul class="bl-tags" aria-label="Project tags">
+            <li>Mobile App</li><li>Behavioral Design</li><li>B2C</li>
+          </ul>
+          <h1 class="bl-title">Bloopy <em>— exploring life beyond work</em></h1>
+
+          <div class="bl-split">
+            <div class="bl-card bl-card--lav">
+              <h2 class="bl-card__h">What is Bloopy?</h2>
+              <p>Bloopy is a gamified solution that aims to <strong>help working professionals create a boundary between work and personal time</strong>, engage intentionally in activities they enjoy, and grow connection through shared experiences.</p>
+            </div>
+            <div class="bl-card bl-card--soft">
+              <h2 class="bl-card__h">Objective</h2>
+              <p>To encourage <strong>positive behavioural change in distressed working professionals</strong> by introducing intentionality, a sense of connection, and identity beyond work.</p>
+            </div>
+          </div>
+
+          <h3 class="bl-h3">Project Snapshot</h3>
+          <dl class="bl-snapshot">
+            <div><dt>Role</dt><dd>Product Designer</dd></div>
+            <div><dt>Timeline</dt><dd>3 Months</dd></div>
+            <div><dt>Team</dt><dd>Solo Project</dd></div>
+            <div><dt>Skills</dt><dd>Behavioral Design<br />User Research<br />Product Design</dd></div>
+          </dl>
+
+          <div class="bl-recall reveal">
+            <div class="bl-recall__q">
+              <img src="assets/case-studies/bloopy/mascot.png" alt="" width="85" height="85" />
+              <div>
+                <p class="bl-recall__kicker">Can you recall?</p>
+                <p class="bl-recall__text">When was the last time you switched off from work and did something you enjoy?</p>
+              </div>
+            </div>
+            <div class="bl-phones bl-phones--fan">
+              <img src="assets/case-studies/bloopy/screen-activities.png" alt="Bloopy screen asking 'What would you like to experience today?' with six activity tiles" width="164" height="354" loading="lazy" />
+              <img src="assets/case-studies/bloopy/screen-sensory.png" alt="A sensory prompt: close your eyes, find the coldest nearby object and hold it for 10 seconds" width="164" height="354" loading="lazy" />
+              <img src="assets/case-studies/bloopy/screen-archetype.png" alt="'Added to the collection' screen revealing The Archivist archetype card" width="173" height="373" loading="lazy" />
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== 02 PROBLEM ========== -->
+        <section id="problem" class="bl-section reveal">
+          <p class="bl-kicker"><span>02</span> The Problem</p>
+          <div class="bl-split bl-split--wide">
+            <div class="bl-card bl-card--sky">
+              <h2 class="bl-h2">When work ends, but the work mode doesn’t.</h2>
+              <p>Thousands of working professionals come home with nothing but distress, burnout and fatigue. In search of rest, they reach for the nearest thing — a phone, a drink, an extra hour in bed, mimicking recovery but barely helping. In the long term leading to chronic exhaustion and quiet resignation.</p>
+            </div>
+            <div class="bl-card bl-card--soft bl-stat">
+              <p class="bl-stat__num">59%</p>
+              <p class="bl-stat__label">of Indian employees reported burnout symptoms in a survey by McKinsey Health Institute</p>
+              <p class="bl-stat__note">Existing wellness solutions fail to bridge the gap between awareness and action.</p>
+            </div>
+          </div>
+          <h3 class="bl-h3">Causes</h3>
+          <ul class="bl-chips">
+            <li>Long working hours</li><li>Loneliness</li><li>Lack of recognition</li><li>Job insecurity</li><li>Poor management</li><li>Inability to disconnect</li><li>Unclear roles</li><li>Toxic workplace culture</li><li>Digital overload</li><li>Stigma around help-seeking</li><li>Work-life imbalance for women</li>
+          </ul>
+        </section>
+
+        <!-- ========== 03 RESEARCH ========== -->
+        <section id="research" class="bl-section">
+          <p class="bl-kicker reveal"><span>03</span> Research</p>
+          <h2 class="bl-h2 reveal"><em>Secondary</em> research</h2>
+
+          <div class="bl-stress reveal">
+            <div>
+              <h3 class="bl-h3 bl-h3--flush">When does stress occur?</h3>
+              <p>When attentional processing <strong>demand exceeds</strong> attentional processing <strong>capacity</strong> for a longer time.</p>
+              <ul class="bl-list">
+                <li><strong>Eustress</strong> (good stress)</li>
+                <li><strong>Distress</strong> (bad stress)</li>
+              </ul>
+              <p class="bl-muted">Good stress can turn into bad stress when pressure exceeds the optimal zone.</p>
+            </div>
+            <figure class="bl-figure">
+              <img src="assets/case-studies/bloopy/stress-diagram.png" alt="Diagram: a person working at a desk; when attentional processing demand rises above capacity, the zone between them is stress" width="596" height="299" loading="lazy" />
+            </figure>
+          </div>
+
+          <div class="bl-split reveal">
+            <div class="bl-card bl-card--soft">
+              <p>Directed attention, needed to focus on one task and ignore distractions, is finite and needs restoration.</p>
+              <p><strong>Lack of restoration leads to decision paralysis, brain fog, and low-effort habits.</strong></p>
+            </div>
+            <div class="bl-card bl-card--lav">
+              <p>When directed attention goes over its capacity, the prefrontal cortex becomes ineffective, leading to <strong>loss of willpower</strong>.</p>
+            </div>
+          </div>
+
+          <p class="bl-pull reveal">People who need recovery are reluctant to it the most… <em>Why? Loss of willpower.</em></p>
+
+
+          <h2 class="bl-h2 bl-gap reveal"><em>Primary</em> research</h2>
+          <div class="bl-primary reveal">
+            <div class="bl-primary__stats">
+              <p class="bl-big">9 <span>Interviews</span></p>
+              <ul>
+                <li><b>4</b> Working from office</li>
+                <li><b>1</b> Working from home</li>
+                <li><b>4</b> Hybrid</li>
+              </ul>
+              <p class="bl-muted"><em>Synthesized with affinity mapping</em></p>
+            </div>
+            <div class="bl-primary__dark">
+              <p class="bl-primary__kicker">To understand →</p>
+              <ul>
+                <li>The lifestyle of the user</li>
+                <li>Their existing ways for recovery</li>
+                <li>Motivation, beliefs and personal experiences</li>
+                <li>Daily user states and their influencers</li>
+              </ul>
+            </div>
+            <img class="bl-primary__paper" src="assets/case-studies/bloopy/questionnaire.png" alt="Interview questionnaire with 21 questions about the participant's workday and evenings" width="408" height="439" loading="lazy" />
+          </div>
+
+          <h3 class="bl-h3 reveal">Research Findings</h3>
+          <div class="bl-findings reveal">
+            <div class="bl-findings__grid">
+              <p><strong>Work spillover:</strong> Stress carries into personal time, driving unhealthy coping habits.</p>
+              <p><strong>Identity conflict:</strong> Exhaustion creates a gap between aspirational self and reality.</p>
+              <p><strong>Productivity-based self-worth:</strong> Rest triggers guilt, self-doubt, and validation-seeking.</p>
+              <p><strong>Low trust in change:</strong> Overwork reduces confidence in following through with new solutions.</p>
+              <p class="bl-findings__key">Exhaustion leads to unconscious coping rather than intentional choices.</p>
+            </div>
+            <figure class="bl-affinity">
+              <img src="assets/case-studies/bloopy/affinity-map.png" alt="Affinity map of interview notes" width="305" height="219" loading="lazy" />
+              <figcaption>The focus was on <strong>recovery after work</strong>, where a huge pattern emerged.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- ========== 04 INSIGHTS ========== -->
+        <section id="insights" class="bl-section">
+          <p class="bl-kicker reveal"><span>04</span> Insights</p>
+          <h2 class="bl-h2 reveal">The feedback loop</h2>
+          <div class="bl-card bl-card--soft bl-loop reveal">
+            <svg class="bl-loop__svg" viewBox="0 0 420 330" role="img" aria-labelledby="loop-t">
+              <title id="loop-t">Cognitive, emotional and physical failure feed into each other in a loop</title>
+              <defs>
+                <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#6a5ff0"/></marker>
+              </defs>
+              <path d="M222 52 C 300 52, 340 80, 344 118" fill="none" stroke="#6a5ff0" stroke-width="1.6" marker-end="url(#ah)" />
+              <path d="M330 210 C 320 262, 270 280, 222 282" fill="none" stroke="#6a5ff0" stroke-width="1.6" marker-end="url(#ah)" />
+              <path d="M70 226 C 50 180, 55 130, 70 104" fill="none" stroke="#6a5ff0" stroke-width="1.6" marker-end="url(#ah)" />
+              <foreignObject x="10" y="20" width="210" height="84"><div class="bl-node"><b>Cognitive Failure</b>Person can’t decide how to relax.</div></foreignObject>
+              <foreignObject x="210" y="122" width="200" height="90"><div class="bl-node"><b>Emotional Failure</b>Person doesn’t feel like they deserve to relax.</div></foreignObject>
+              <foreignObject x="20" y="228" width="200" height="96"><div class="bl-node"><b>Physical Failure</b>Even if they try to relax, their body is too “wired” to actually rest.</div></foreignObject>
+            </svg>
+            <div class="bl-loop__arrow" aria-hidden="true"><span>consequence</span>→</div>
+            <div class="bl-loop__out">
+              <p class="bl-loop__title">Passive Recovery / Distraction</p>
+              <ul>
+                <li><img src="assets/case-studies/bloopy/icon-doomscrolling.png" alt="" width="41" height="37" />Doomscrolling</li>
+                <li><img src="assets/case-studies/bloopy/icon-substance.png" alt="" width="33" height="38" />Substance consumption</li>
+                <li><img src="assets/case-studies/bloopy/icon-sleep.png" alt="" width="36" height="34" />Excessive sleep</li>
+              </ul>
+              <p class="bl-muted">↑ Mimicking recovery</p>
+            </div>
+            <p class="bl-loop__caption">When these three failures happen at once, they create a feedback loop.</p>
+          </div>
+
+          <blockquote class="bl-hmw reveal">
+            <span>How might we</span> help working professionals break the loop of passive recovery and reconnect with themselves?
+          </blockquote>
+
+          <h3 class="bl-h3 reveal">Who did I design for</h3>
+          <div class="bl-personas reveal">
+            <article class="bl-persona">
+              <p class="bl-persona__type">The Unmotivated Professional</p>
+              <img src="assets/case-studies/bloopy/persona-annya.png" alt="Illustration of Annya sitting at a desk looking tired" width="200" height="229" loading="lazy" />
+              <p class="bl-persona__name">Annya, 31 · Senior Analyst, Mumbai</p>
+              <p>Has stopped planning personal activities after repeated failures, accepting scrolling as her default evening routine.</p>
+              <p class="bl-persona__need">She needs a small, tangible success that rebuilds her belief in change.</p>
+              <ul class="bl-chips bl-chips--sm"><li>Stopped personal interest activity</li><li>Scrolling is default</li></ul>
+            </article>
+            <article class="bl-persona">
+              <p class="bl-persona__type">The Motivated Professional</p>
+              <img src="assets/case-studies/bloopy/persona-aryan.png" alt="Illustration of Aryan at a desk, lit by his phone screen" width="215" height="246" loading="lazy" />
+              <p class="bl-persona__name">Aryan, 27 · Product Manager, Bangalore</p>
+              <p>Aspires to use his evenings meaningfully but lacks the energy after work, falling back on scrolling and feeling guilty.</p>
+              <p class="bl-persona__need">He needs a recovery system designed for his exhausted self, not his motivated morning self.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ========== 05 IDEATION ========== -->
+        <section id="ideation" class="bl-section">
+          <p class="bl-kicker reveal"><span>05</span> Ideation</p>
+          <h2 class="bl-h2 reveal">Design values</h2>
+          <ul class="bl-values reveal">
+            <li class="v1">Recovery without shame</li>
+            <li class="v2">Intent of self-compassion</li>
+            <li class="v3">Well-being over productivity</li>
+          </ul>
+
+          <h3 class="bl-h3 reveal">How might we…</h3>
+          <ol class="bl-hmw-list reveal">
+            <li>intervene in the transition moment, giving a psychological cue to exit?</li>
+            <li>nudge people who are reluctant to recover (facing the recovery paradox)?</li>
+            <li>design an intervention that is as low effort to start as scrolling and similar activities?</li>
+            <li>make the user feel it’s okay to rest and be themselves?</li>
+            <li>reintroduce a user to their personal interests and identity beyond work?</li>
+          </ol>
+        </section>
+
+        <!-- ========== 06 INTERVENTION ========== -->
+        <section id="intervention" class="bl-section">
+          <p class="bl-kicker reveal"><span>06</span> Intervention</p>
+          <h2 class="bl-h2 reveal">Intervention framework</h2>
+          <p class="bl-lead reveal">The basic framework of the intervention, based on research synthesis.</p>
+          <ol class="bl-bridge reveal" aria-label="From work identity to personal identity">
+            <li class="bl-bridge__end bl-bridge__end--work">Work Identity</li>
+            <li>Psychological Detachment</li>
+            <li>Personal identity recovery <small>(after workday)</small></li>
+            <li>Parallel recovery through social connection</li>
+            <li class="bl-bridge__end bl-bridge__end--self">Personal Identity</li>
+          </ol>
+
+          <h2 class="bl-h2 bl-gap reveal">Intervention design</h2>
+          <div class="bl-process reveal">
+            <div>
+              <p class="bl-lead">This intervention follows Susan Michie’s Behaviour Change Intervention Design Process.</p>
+              <p class="bl-h4">The process followed:</p>
+              <ol class="bl-steps">
+                <li>Mapping out targeted behaviours with COM-B</li>
+                <li>Mapping different functions and techniques</li>
+                <li>Deriving the ideas around these functions</li>
+                <li>APEASE criteria for validation</li>
+              </ol>
+            </div>
+            <figure class="bl-figure bl-bcw">
+              <img src="assets/case-studies/bloopy/bct-wheel.png" alt="Behaviour Change Wheel showing intervention functions around capability, opportunity and motivation" width="365" height="250" loading="lazy" />
+              <img src="assets/case-studies/bloopy/bct-app.png" alt="BCT Taxonomy app screen describing the enablement function" width="121" height="245" loading="lazy" />
+            </figure>
+          </div>
+
+          <div class="bl-table-wrap reveal">
+            <table class="bl-table">
+              <thead><tr><th scope="col">Targeted behaviours</th><th scope="col">Functions</th><th scope="col">Design ideas</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><ul><li>Able to cross the threshold of work identity to personal identity</li><li>Personal identity activity without interference</li><li>Initiating any recovery behaviour</li></ul></td>
+                  <td><ul><li>Goal setting</li><li>Action planning</li><li>Social support (emotional)</li><li>Self-monitoring of behaviour</li><li>Review behaviour goals</li><li>Feedback on behaviour</li><li>Prompting</li><li>Identity associated with the changed behaviour</li></ul></td>
+                  <td><ul><li>Daily goals for individuals and groups</li><li>Weekly resets for the goals</li><li>Social presence when in personal identity zone</li><li>Daily check-ins (tick mark after the recovery)</li><li>Weekend reviews, decreasing mobile screen time</li><li>Haptics for the psychological detachment task</li><li>Individual scores within group</li><li>Nudging when the work is done</li><li>Choosing personal values &amp; activities</li></ul></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="bl-h2 bl-gap reveal">Concept model</h2>
+          <div class="bl-card bl-card--soft bl-concept reveal">
+            <svg viewBox="390 120 1240 510" role="img" aria-labelledby="cm-t cm-d">
+              <title id="cm-t">Concept model</title>
+              <desc id="cm-d">Users split into an individual path and a social path. Individuals, with or without motivation, go through psychological detachment with a gestural interaction and intent reinforcement. Motivated users get a personal task experience where they add their own tasks and build streaks; unmotivated users get an autotelic task experience with prompts and no streaks, points or time. Groups see a collective visualisation, group incentives and a shared experience. All paths lead to the journey continuing.</desc>
+              <defs>
+                <marker id="cm-a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#9a94c9"/></marker>
+              </defs>
+              <g class="cm-lines" fill="none" stroke="#c8c3ec" stroke-width="2" marker-end="url(#cm-a)">
+                <path d="M476 442 H495 Q510 442 510 427 V332 Q510 317 525 317 H540" />
+                <path d="M476 442 H495 Q510 442 510 457 V560 Q510 575 525 575 H548" />
+                <path d="M694 317 H712 Q727 317 727 302 V256" />
+                <path d="M694 317 H712 Q727 317 727 332 V396" />
+                <path d="M794 229 H800 Q811 229 811 240 V266" />
+                <path d="M794 422 H800 Q811 422 811 411 V369" />
+                <path d="M872 318 H894" />
+                <path d="M960 287 V280 Q960 270 948 270 H890 Q877 270 877 257 V244 Q877 231 890 231 H921" />
+                <path d="M960 349 V356 Q960 366 948 366 H890 Q877 366 877 379 V405 Q877 418 890 418 H921" />
+                <path d="M1014 206 V192 Q1014 177 1029 177 H1113" />
+                <path d="M1016 443 V452 Q1016 467 1031 467 H1113" />
+                <path d="M1298 177 H1345 Q1360 177 1360 192 V221" />
+                <path d="M1336 467 Q1360 467 1360 452 V419" />
+                <path d="M1450 264 H1515 Q1530 264 1530 279 V410" />
+                <path d="M1452 377 H1515 Q1530 377 1530 392 V410" />
+                <path d="M696 576 H760" />
+                <path d="M958 576 H1002" />
+                <path d="M1167 576 H1196" />
+                <path d="M1362 576 H1515 Q1530 576 1530 561 V476" />
+              </g>
+              <g class="cm-nodes">
+                <ellipse cx="439" cy="442" rx="37" ry="29" class="n-root"/><text x="439" y="447" class="t">User/s</text>
+                <ellipse cx="618" cy="317" rx="76" ry="37" class="n-ind"/><text x="618" y="322" class="t">Individual</text>
+                <ellipse cx="622" cy="575" rx="72" ry="35" class="n-soc"/><text x="622" y="570" class="t">Social /</text><text x="622" y="588" class="t">Group</text>
+
+                <rect x="661" y="206" width="133" height="46" rx="8" class="n-ind"/><text x="727" y="234" class="t s">Motivation present</text>
+                <rect x="661" y="399" width="133" height="46" rx="8" class="n-ind"/><text x="727" y="427" class="t s">Motivation absent</text>
+                <rect x="750" y="270" width="122" height="96" rx="8" class="n-key"/><text x="811" y="300" class="t s w">Psychological</text><text x="811" y="316" class="t s w">detachment with</text><text x="811" y="332" class="t s w">gestural</text><text x="811" y="348" class="t s w">interaction</text>
+                <rect x="898" y="287" width="125" height="62" rx="8" class="n-key"/><text x="960" y="314" class="t s w">Intent</text><text x="960" y="330" class="t s w">reinforcement</text>
+                <rect x="925" y="206" width="179" height="51" rx="8" class="n-ind"/><text x="1014" y="236" class="t s">Personal task experience</text>
+                <rect x="925" y="392" width="183" height="51" rx="8" class="n-ind"/><text x="1016" y="422" class="t s">Autotelic task experience</text>
+                <rect x="1117" y="142" width="181" height="70" rx="8" class="n-ind2"/><text x="1207" y="172" class="t s">User adds their own tasks</text><text x="1207" y="190" class="t s">Streaks get created</text>
+                <rect x="1117" y="431" width="219" height="73" rx="8" class="n-ind2"/><text x="1226" y="462" class="t s">Gets autotelic activity prompts</text><text x="1226" y="480" class="t s">No streaks / points / time</text>
+                <rect x="1272" y="225" width="178" height="77" rx="8" class="n-ind2"/><text x="1361" y="252" class="t s">Journey moves with</text><text x="1361" y="268" class="t s">streaks, archetype</text><text x="1361" y="284" class="t s">reveal and incentives</text>
+                <rect x="1274" y="338" width="178" height="77" rx="8" class="n-ind2"/><text x="1363" y="364" class="t s">Journey moves with</text><text x="1363" y="380" class="t s">archetype reveal, partial</text><text x="1363" y="396" class="t s">incentives, no streaks</text>
+                <rect x="1449" y="415" width="162" height="58" rx="8" class="n-end"/><text x="1530" y="449" class="t s w">Journey continues</text>
+                <rect x="764" y="539" width="193" height="73" rx="8" class="n-soc"/><text x="860" y="570" class="t s">Collective visualisation</text><text x="860" y="588" class="t s">of group participants</text>
+                <rect x="1006" y="539" width="160" height="73" rx="8" class="n-soc"/><text x="1086" y="580" class="t s">Group incentives</text>
+                <rect x="1200" y="539" width="161" height="73" rx="8" class="n-soc"/><text x="1280" y="580" class="t s">Shared experience</text>
+              </g>
+            </svg>
+            <ul class="bl-legend" aria-hidden="true">
+              <li><i class="n-ind"></i>Individual path</li>
+              <li><i class="n-key"></i>Core mechanic</li>
+              <li><i class="n-soc"></i>Social path</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ========== 07 KEY DECISIONS ========== -->
+        <section id="decisions" class="bl-section">
+          <p class="bl-kicker reveal"><span>07</span> Key design decisions</p>
+
+          <article class="bl-decision reveal">
+            <header class="bl-decision__head bl-decision__head--lav">
+              <span class="bl-decision__num">01</span>
+              <div>
+                <h2 class="bl-decision__title">Psychological Detachment</h2>
+                <p class="bl-decision__from">From an abstract loop <span>→</span> to a familiar gesture</p>
+              </div>
+            </header>
+            <p class="bl-decision__body">Replaced the infinity-loop interaction with a swipe-to-close gesture, mimicking the real-life action of closing a window to create a clear sense of switching off from work.</p>
+            <div class="bl-phones bl-phones--compare">
+              <figure><img src="assets/case-studies/bloopy/kd-infinity-loop.png" alt="Earlier version: trace a glowing dot along an infinity loop" width="243" height="501" loading="lazy" /><figcaption class="is-before">Before · infinity loop</figcaption></figure>
+              <figure><img src="assets/case-studies/bloopy/kd-swipe-to-close.png" alt="Final version: swipe across to close the work window, 'Stepping into your personal space'" width="243" height="501" loading="lazy" /><figcaption class="is-after">After · swipe to close</figcaption></figure>
+            </div>
+          </article>
+
+          <article class="bl-decision reveal">
+            <header class="bl-decision__head bl-decision__head--mint">
+              <span class="bl-decision__num">02</span>
+              <div>
+                <h2 class="bl-decision__title">Personal Recovery</h2>
+                <p class="bl-decision__from">From task completion <span>→</span> to intrinsic enjoyment</p>
+              </div>
+            </header>
+            <p class="bl-decision__body">Replaced ambiguous, effortful tasks with <strong>autotelic prompts</strong>, where the experience itself is rewarding, making recovery easier to initiate without pressure.</p>
+            <div class="bl-phones">
+              <img src="assets/case-studies/bloopy/kd-sketch-prompt.png" alt="'Your canvas is waiting… Let's sketch for 5 mins!' with the Bloopy mascot" width="243" height="502" loading="lazy" />
+              <img src="assets/case-studies/bloopy/kd-sensory-prompt.png" alt="Sensory prompt: close your eyes and hold the coldest nearby object for 10 seconds" width="243" height="502" loading="lazy" />
+              <img src="assets/case-studies/bloopy/kd-timer.png" alt="Gentle timer for 'Get back to painting' with options to take a pause or finish" width="243" height="501" loading="lazy" />
+            </div>
+          </article>
+
+          <article class="bl-decision reveal">
+            <header class="bl-decision__head bl-decision__head--pink">
+              <span class="bl-decision__num">03</span>
+              <div>
+                <h2 class="bl-decision__title">Social Connection</h2>
+                <p class="bl-decision__from">From codependency <span>→</span> to shared presence</p>
+              </div>
+            </header>
+            <p class="bl-decision__body">Iterated collective challenges with simple participation visualisations, encouraging connection without obligation, comparison, or pressure to stay active.</p>
+            <p class="bl-decision__note">Introduced a rest option for users who want to disconnect from screens, making rest as valid as participation.</p>
+            <div class="bl-phones">
+              <img src="assets/case-studies/bloopy/kd-growing-tree.png" alt="'Growing a tree — challenge completed' with a sunflower plant and each member's contribution" width="250" height="516" loading="lazy" />
+              <img src="assets/case-studies/bloopy/kd-group-participation.png" alt="Group journey screen with a participation ring for the group 'Delulu is Solulu' and recent activities" width="251" height="516" loading="lazy" />
+            </div>
+          </article>
+        </section>
+
+        <!-- ========== 08 SOLUTION ========== -->
+        <section id="solution" class="bl-section">
+          <p class="bl-kicker reveal"><span>08</span> The Solution</p>
+          <h2 class="bl-h2 reveal">Screen flows</h2>
+          <p class="bl-lead reveal">The app journey, flow by flow: from the moment work ends to recovering with your group.</p>
+          <article class="bl-flow reveal" id="flow-switching-off">
+            <div class="bl-flow__text">
+              <p class="bl-flow__num">Flow 01</p>
+              <h3 class="bl-flow__title">Switching off from work</h3>
+              <p class="bl-flow__intro">When the workday ends, Bloopy helps you mark the switch from work to you.</p>
+              <ol class="bl-flow__steps"><li data-t="0.0">Work is done. Bloopy gently nudges you to take time for yourself.</li><li data-t="2.6">A detachment ritual: trace the path to step out of work mode.</li><li data-t="5.2">Feeling tense? The path becomes more intricate, with haptics that move from a tense to a calm rhythm.</li><li data-t="10.4">Swipe to close the work window, like shutting a laptop.</li><li data-t="13.0">Work is done. A moment for you. Your phone now goes into recovery mode, blocking work apps and notifications.</li></ol>
+            </div>
+            <div class="bl-flow__media">
+              <video muted loop playsinline preload="none" poster="assets/case-studies/bloopy/flows/flow-01-switching-off.jpg" width="960" height="1200" aria-label="Screen flow: Switching off from work">
+                <source src="assets/case-studies/bloopy/flows/flow-01-switching-off.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+          <article class="bl-flow bl-flow--flip reveal" id="flow-your-circle">
+            <div class="bl-flow__text">
+              <p class="bl-flow__num">Flow 02</p>
+              <h3 class="bl-flow__title">Recovering together</h3>
+              <p class="bl-flow__intro">A home-screen widget shows who else in your circle is taking time for themselves.</p>
+              <ol class="bl-flow__steps"><li data-t="0.0">Back on the home screen, the ‘Your circle’ widget appears.</li><li data-t="2.6">Green dots show friends who are recovering right now. ‘Your circle is breathing.’</li></ol>
+            </div>
+            <div class="bl-flow__media">
+              <video muted loop playsinline preload="none" poster="assets/case-studies/bloopy/flows/flow-02-your-circle.jpg" width="960" height="1200" aria-label="Screen flow: Recovering together">
+                <source src="assets/case-studies/bloopy/flows/flow-02-your-circle.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+          <article class="bl-flow reveal" id="flow-find-your-spark">
+            <div class="bl-flow__text">
+              <p class="bl-flow__num">Flow 03</p>
+              <h3 class="bl-flow__title">Find your spark</h3>
+              <p class="bl-flow__intro">For when you don’t know what you feel like doing: small, playful prompts that are enjoyable in themselves.</p>
+              <ol class="bl-flow__steps"><li data-t="0.0">‘Find My Spark’ is for when you want a little inspiration.</li><li data-t="2.6">Pick how you’d like to spend the moment: sense, explore, craft, observe, move or reflect.</li><li data-t="5.2">Scratch the card to reveal what’s waiting inside.</li><li data-t="10.4">A small sensory prompt: close your eyes, find the coldest object nearby.</li><li data-t="13.0">This moment is yours. Skip anything that doesn’t feel right.</li><li data-t="15.6">Did this time feel like yours? Bloopy learns from your answer.</li><li data-t="18.2">Keep a memory if you like: write, capture, record or doodle.</li><li data-t="20.8">The experience is added to your journey.</li><li data-t="23.4">Back home, ‘sense’ is ticked off.</li><li data-t="26.0" class="is-key"><strong>Autotelic experience prompts:</strong> the activity itself is the reward. There are no points, badges or scores to chase.</li></ol>
+            </div>
+            <div class="bl-flow__media">
+              <video muted loop playsinline preload="none" poster="assets/case-studies/bloopy/flows/flow-03-find-your-spark.jpg" width="960" height="1200" aria-label="Screen flow: Find your spark">
+                <source src="assets/case-studies/bloopy/flows/flow-03-find-your-spark.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+          <article class="bl-flow bl-flow--flip reveal" id="flow-not-today">
+            <div class="bl-flow__text">
+              <p class="bl-flow__num">Flow 04</p>
+              <h3 class="bl-flow__title">Not today? That’s okay</h3>
+              <p class="bl-flow__intro">Choosing rest counts too. No guilt, no lost progress.</p>
+              <ol class="bl-flow__steps"><li data-t="0.0">Not in the mood? Choose to play later, or not today.</li><li data-t="2.6">Taking rest is also part of ‘me time’.</li><li data-t="5.2">Happy rest!</li></ol>
+            </div>
+            <div class="bl-flow__media">
+              <video muted loop playsinline preload="none" poster="assets/case-studies/bloopy/flows/flow-04-not-today.jpg" width="960" height="1200" aria-label="Screen flow: Not today? That’s okay">
+                <source src="assets/case-studies/bloopy/flows/flow-04-not-today.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+          <article class="bl-flow reveal" id="flow-archetype">
+            <div class="bl-flow__text">
+              <p class="bl-flow__num">Flow 05</p>
+              <h3 class="bl-flow__title">Complete all six</h3>
+              <p class="bl-flow__intro">Each finished activity unlocks a piece of a puzzle that reveals who you are beyond work.</p>
+              <ol class="bl-flow__steps"><li data-t="0.0">All six done. One step complete: let’s reveal your insight.</li><li data-t="2.6">Each tile flips to reveal a piece of the picture…</li><li data-t="5.2">…until the whole illustration comes together.</li><li data-t="7.8">‘The Archivist’ joins your collection.</li><li data-t="10.4">Begin stage completed. Bloopy reflects on what it noticed about you.</li><li data-t="13.0">Your journey moves on to the next stage: Explore.</li></ol>
+            </div>
+            <div class="bl-flow__media">
+              <video muted loop playsinline preload="none" poster="assets/case-studies/bloopy/flows/flow-05-archetype.jpg" width="960" height="1200" aria-label="Screen flow: Complete all six">
+                <source src="assets/case-studies/bloopy/flows/flow-05-archetype.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+          <article class="bl-flow bl-flow--flip reveal" id="flow-own-activities">
+            <div class="bl-flow__text">
+              <p class="bl-flow__num">Flow 06</p>
+              <h3 class="bl-flow__title">Know what you enjoy?</h3>
+              <p class="bl-flow__intro">Motivated users pick their own activities and build gentle streaks.</p>
+              <ol class="bl-flow__steps"><li data-t="0.0">What brings you here? Choose what feels closest.</li><li data-t="2.6">‘My Own Activities’: make time for the things you love.</li><li data-t="5.2">Great! You know what you enjoy.</li><li data-t="7.8">Choose an activity, like getting back to painting, and start a streak.</li><li data-t="10.4">Tap a card to log your day.</li><li data-t="13.0">A gentle timer, with no pressure to keep going.</li><li data-t="15.6">Done!</li><li data-t="18.2">A quick check-in on how it felt.</li><li data-t="20.8">Day 1 of your 6-day streak, complete.</li><li data-t="23.4">Finish the streak and the days flip to reveal a picture…</li><li data-t="26.0">‘The Painter’ joins your collection.</li><li data-t="28.6">Yayy! Streak completed. On to the next stage.</li></ol>
+            </div>
+            <div class="bl-flow__media">
+              <video muted loop playsinline preload="none" poster="assets/case-studies/bloopy/flows/flow-06-own-activities.jpg" width="960" height="1200" aria-label="Screen flow: Know what you enjoy?">
+                <source src="assets/case-studies/bloopy/flows/flow-06-own-activities.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+          <article class="bl-flow reveal" id="flow-journey">
+            <div class="bl-flow__text">
+              <p class="bl-flow__num">Flow 07</p>
+              <h3 class="bl-flow__title">A journey of seasons</h3>
+              <p class="bl-flow__intro">No numbers or scores: progress moves through seasons, so experiences keep recurring.</p>
+              <ol class="bl-flow__steps"><li data-t="0.0">Your journey begins in Summer.</li><li data-t="2.6">Add memories along the way: words, photos, voice notes or doodles.</li><li data-t="5.2">Each stage you complete moves you forward.</li><li data-t="7.8">The path moves through Summer, Monsoon and Winter, with no streak counts or scores.</li></ol>
+            </div>
+            <div class="bl-flow__media">
+              <video muted loop playsinline preload="none" poster="assets/case-studies/bloopy/flows/flow-07-journey.jpg" width="960" height="1200" aria-label="Screen flow: A journey of seasons">
+                <source src="assets/case-studies/bloopy/flows/flow-07-journey.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+          <article class="bl-flow bl-flow--flip reveal" id="flow-together">
+            <div class="bl-flow__text">
+              <p class="bl-flow__num">Flow 08</p>
+              <h3 class="bl-flow__title">Shared presence</h3>
+              <p class="bl-flow__intro">See your group’s participation, cheer each other on, or step away to rest.</p>
+              <ol class="bl-flow__steps"><li data-t="0.0">Your group sees everyone’s participation. Challenge friends, or simply rest.</li></ol>
+            </div>
+            <div class="bl-flow__media">
+              <video muted loop playsinline preload="none" poster="assets/case-studies/bloopy/flows/flow-08-together.jpg" width="960" height="1200" aria-label="Screen flow: Shared presence">
+                <source src="assets/case-studies/bloopy/flows/flow-08-together.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </article>
+        </section>
+
+        <!-- ========== END ========== -->
+        <section class="bl-section bl-end reveal">
+          <img src="assets/case-studies/bloopy/mascot.png" alt="" width="85" height="85" />
+          <p class="bl-end__text">Thanks for reading! <em>Go switch off for a bit.</em></p>
+          <div class="bl-end__links">
+            <a href="index.html#work" class="bl-back">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7.5 3.5 3 8l4.5 4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              All work
+            </a>
+            <a href="case-study-gams.html" class="bl-next">Next: Designing Visualisations for Group Activity Metrics →</a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__cta">Open to internship opportunities</p>
+        <p class="footer__small"><a href="mailto:vprajaktacs09@gmail.com">vprajaktacs09@gmail.com</a><br />Made with &lt;3 @ 2026 Prajakta Vispute</p>
+      </div>
+      <nav class="footer__links" aria-label="Social">
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Behance</a>
+        <a href="https://drive.google.com/drive/folders/1hAsbrjrW87Lb0qt52RB3qjIFTZk93kbB" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Contents: highlight the section currently in view.
+    (function () {
+      const links = [...document.querySelectorAll(".bl-toc a")];
+      const map = new Map(links.map((a) => [a.getAttribute("href").slice(1), a]));
+      if (!("IntersectionObserver" in window)) return;
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            links.forEach((a) => a.classList.remove("is-active"));
+            const a = map.get(e.target.id);
+            if (a) a.classList.add("is-active");
+          }
+        });
+      }, { rootMargin: "-35% 0px -60% 0px" });
+      map.forEach((_, id) => { const s = document.getElementById(id); if (s) io.observe(s); });
+    })();
+  </script>
+  <script>
+    // Flow videos: play when on screen, pause when not; highlight the step being shown.
+    (function () {
+      const flows = [...document.querySelectorAll(".bl-flow")];
+      const io = "IntersectionObserver" in window ? new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          const v = e.target.querySelector("video");
+          if (e.isIntersecting) { v.play().catch(() => {}); } else { v.pause(); }
+        });
+      }, { threshold: 0.45 }) : null;
+      flows.forEach((fl) => {
+        const v = fl.querySelector("video");
+        const steps = [...fl.querySelectorAll(".bl-flow__steps li")];
+        if (io) io.observe(fl); else v.autoplay = true;
+        v.addEventListener("timeupdate", () => {
+          let cur = 0;
+          steps.forEach((li, i) => { if (v.currentTime >= parseFloat(li.dataset.t) - 0.1) cur = i; });
+          steps.forEach((li, i) => li.classList.toggle("is-active", i === cur));
+        });
+        steps.forEach((li) => li.addEventListener("click", () => { v.currentTime = parseFloat(li.dataset.t); v.play().catch(() => {}); }));
+      });
+    })();
+  </script>
+</body>
+</html>

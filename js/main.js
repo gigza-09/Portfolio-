@@ -23,6 +23,7 @@
   const links = [...document.querySelectorAll('.nav__link[href^="#"]')];
   const sections = links.map((l) => document.querySelector(l.getAttribute("href"))).filter(Boolean);
   const setActive = () => {
+    if (!sections.length) return; // e.g. case study pages, whose nav links point back to index.html
     const y = window.scrollY + window.innerHeight * 0.35;
     let current = sections[0];
     sections.forEach((s) => { if (s.offsetTop <= y) current = s; });
@@ -33,7 +34,7 @@
 
   // Hero side panels: flower pattern paints in from the cursor, with a pencil cursor.
   const cursor = document.querySelector(".pencil-cursor");
-  document.querySelectorAll(".hero__side").forEach((side) => {
+  if (cursor) document.querySelectorAll(".hero__side").forEach((side) => {
     const fill = side.querySelector(".hero__fill");
     const track = (e) => {
       const r = side.getBoundingClientRect();
