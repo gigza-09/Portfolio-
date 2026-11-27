@@ -43,6 +43,10 @@ html, body, * {
 a, a *, button, button *, [role="button"], label, summary {
   cursor: url("../assets/cursor-circle.svg?v=23") 10 10, pointer;
 }
+/* Over a project card the cursor itself becomes an orange "VIEW" pill ("40 14" = its centre) */
+.project, .project * {
+  cursor: url("../assets/cursor-view.svg?v=8") 40 14, pointer;
+}
 
 body {
   margin: 0;
@@ -337,12 +341,10 @@ ul { list-style: none; }
 .project {
   border: 0.77px solid var(--card-border);
   border-radius: 12.4px;
-  transition: background-color 0.4s var(--ease), transform 0.4s var(--ease);
+  transition: transform 0.4s var(--ease);
 }
 .project:hover {
-  transform: translateY(-4px); /* lifts slightly; the border stays light grey */
-  /* each card can set --card-hover (in index.html) to a colour from its own thumbnail */
-  background-color: var(--card-hover, transparent);
+  transform: translateY(-4px); /* lifts slightly; stays white with a light-grey border */
 }
 .project__link {
   display: flex;
@@ -512,9 +514,18 @@ ul { list-style: none; }
 .footer__cta { font: 500 15.5px/1.24 var(--sans); }
 .footer__small { margin-top: 13px; font-size: 15.5px; line-height: 1.24; }
 .footer a { text-decoration: none; }
-.footer__links { display: flex; gap: 55px; align-self: flex-end; margin-bottom: 49px; font-size: 15.5px; }
-.footer__links a { position: relative; }
-.footer__links a::after {
+/* Right side mirrors the left: email on the "Open to …" line, LinkedIn + Resume on the "Made with" line */
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 13px;
+  font-size: 15.5px;
+  line-height: 1.24;
+}
+.footer__links { display: flex; gap: 28px; }
+.footer__links a, .footer__email { position: relative; }
+.footer__links a::after, .footer__email::after {
   content: "";
   position: absolute;
   left: 0; right: 0; bottom: -2px;
@@ -524,7 +535,7 @@ ul { list-style: none; }
   transform-origin: left;
   transition: transform 0.35s var(--ease);
 }
-.footer__links a:hover::after { transform: scaleX(1); }
+.footer__links a:hover::after, .footer__email:hover::after { transform: scaleX(1); }
 
 /* ---------- Reveal on scroll ---------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
@@ -561,7 +572,8 @@ ul { list-style: none; }
   .toolkit__icons { gap: 20px; flex-wrap: wrap; }
   .motto { font-size: 26px; padding-top: 90px; }
   .footer__inner { flex-direction: column; align-items: flex-start; justify-content: center; padding: 40px 0; }
-  .footer__links { align-self: flex-start; margin: 0; gap: 28px; }
+  .footer__right { align-items: flex-start; }
+  .footer__links { gap: 28px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

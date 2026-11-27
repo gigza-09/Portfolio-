@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="29" viewBox="0 0 80 29">
+  <!-- "VIEW" pill cursor shown over project cards: hero orange, an outline eye icon, then VIEW drawn as shapes in Instrument Sans at 13px (thickened slightly to medium) -->
+  <rect x="0" y="0" width="80" height="29" rx="14.5" fill="#ff6b00"/>
+  <path d="M13.45 14.5 Q20.65 4.6 27.85 14.5 Q20.65 24.4 13.45 14.5 Z" fill="none" stroke="#ffffff" stroke-width="1.4" stroke-linejoin="round"/>
+  <circle cx="20.65" cy="14.5" r="2.7" fill="none" stroke="#ffffff" stroke-width="1.4"/>
+  <path fill="#ffffff" stroke="#ffffff" stroke-width="0.45" stroke-linejoin="round" d="M36.76 19.18L33.15 9.82L34.29 9.82L37.64 18.71L37.25 18.71L40.6 9.82L41.67 9.82L38.06 19.18ZM43.26 19.18L43.26 9.82L44.33 9.82L44.33 19.18ZM46.56 19.18L46.56 9.82L47.63 9.82L47.63 19.18ZM47.11 19.18L47.11 18.24L52.83 18.24L52.83 19.18ZM47.11 14.77L47.11 13.84L52.36 13.84L52.36 14.77ZM47.11 10.76L47.11 9.82L52.72 9.82L52.72 10.76ZM56.77 19.18L54 9.82L55.09 9.82L57.57 18.46L57.38 18.46L59.81 9.82L61.11 9.82L63.55 18.46L63.36 18.46L65.83 9.82L66.85 9.82L64.08 19.18L62.78 19.18L60.35 10.79L60.51 10.79L58.07 19.18Z"/>
+</svg>
