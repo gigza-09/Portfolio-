@@ -32,27 +32,24 @@
   window.addEventListener("scroll", setActive, { passive: true });
   setActive();
 
-  // Hero side panels: flower pattern paints in from the cursor, with a pencil cursor.
-  const cursor = document.querySelector(".pencil-cursor");
-  if (cursor) document.querySelectorAll(".hero__side").forEach((side) => {
+  // Hero side panels (orange flower panels and black tagline panels):
+  // the fill paints in from wherever the cursor enters and shrinks back toward where it leaves.
+  document.querySelectorAll(".hero__side").forEach((side) => {
     const fill = side.querySelector(".hero__fill");
+    if (!fill) return;
     const track = (e) => {
       const r = side.getBoundingClientRect();
       fill.style.setProperty("--x", e.clientX - r.left + "px");
       fill.style.setProperty("--y", e.clientY - r.top + "px");
-      cursor.style.setProperty("--cx", e.clientX + "px");
-      cursor.style.setProperty("--cy", e.clientY + "px");
     };
     side.addEventListener("pointerenter", (e) => {
       track(e);
       side.classList.add("is-on");
-      cursor.classList.add("is-on");
     });
     side.addEventListener("pointermove", track);
     side.addEventListener("pointerleave", (e) => {
       track(e); // collapse back toward the exit point
       side.classList.remove("is-on");
-      cursor.classList.remove("is-on");
     });
   });
 })();
